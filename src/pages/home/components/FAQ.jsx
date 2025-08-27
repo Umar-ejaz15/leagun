@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import TopShape from "@/components/TopShape";
+import BottomShape from "@/components/BottomShape";
 
 function FAQItem({ question, answer, index }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +17,8 @@ function FAQItem({ question, answer, index }) {
       className={cn(
         "group border border-gray-200 rounded-2xl bg-white transition-all duration-300",
         isOpen
-          ? "shadow-lg"
-          : "hover:shadow-md"
+          ? "shadow-lg shadow-purple-200/50"
+          : "hover:shadow-md hover:shadow-purple-100/40"
       )}
     >
       <button
@@ -26,7 +28,7 @@ function FAQItem({ question, answer, index }) {
       >
         <h3
           className={cn(
-            "text-left text-lg sm:text-xl font-medium text-gray-900",
+            "text-left text-lg sm:text-xl font-medium text-gray-900 transition-colors duration-300",
             isOpen && "text-purple-600"
           )}
         >
@@ -80,18 +82,25 @@ export default function Faq3() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-">
+    <section className="relative w-full overflow-hidden py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 ">
+       <div className="absolute overflow-hidden blur-xl inset-0 z-0 opacity-20">
+              <TopShape />
+              <BottomShape />
+            </div>
       <div className="relative mx-auto max-w-3xl text-center">
         <Badge
           variant="outline"
-          className="border border-gray-300 text-purple-500 mb-4 px-4 py-1 text-lg sm:text-xl font-semibold tracking-widest uppercase"
+          className="border border-purple-400 bg-gradient-to-r from-purple-100 via-purple-200 to-purple-100 text-purple-700 mb-4 px-4 py-1 text-lg sm:text-xl font-semibold tracking-widest uppercase"
         >
           FAQs
         </Badge>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold
+                       bg-clip-text text-transparent
+                       bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400
+                       drop-shadow-lg mb-2">
           Frequently Asked Questions
         </h2>
-        <p className="text-gray-500 text-sm sm:text-md">
+        <p className="text-gray-600 text-sm sm:text-md">
           Everything you need to know about LeadGun
         </p>
 

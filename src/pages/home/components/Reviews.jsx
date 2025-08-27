@@ -1,6 +1,8 @@
 import React from "react";
 import { Star } from "lucide-react";
 import { Highlighter } from "@/components/magicui/highlighter";
+import TopShape from "@/components/TopShape";
+import BottomShape from "@/components/BottomShape";
 
 const reviews = [
   { name: "John Doe", role: "Plumber", text: "This AI lead generation system skyrocketed my business! High-quality local leads every week.", rating: 5 },
@@ -15,18 +17,25 @@ const reviews = [
 
 const Reviews = () => {
   return (
-    <section className="bg-gray-50 py-20 px-6 md:px-12">
+    <section className="relative py-20 px-6 md:px-12">
+       <div className="absolute overflow-hidden blur-xl inset-0 z-0 opacity-20">
+        <TopShape />
+        <BottomShape />
+      </div>
       <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold
+                       bg-clip-text text-transparent 
+                       bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400
+                       drop-shadow-lg">
           What Our{" "}
-          <Highlighter action="underline" color="red">
-            <span className="text-purple-600">
+          <Highlighter action="underline" color="purple">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
               Clients
             </span>
           </Highlighter>{" "}
           Say
         </h2>
-        <p className="mt-4 text-gray-600 text-lg max-w-3xl mx-auto">
+        <p className="mt-4 text-gray-800 md:text-lg drop-shadow-sm max-w-3xl mx-auto">
           Real feedback from service businesses using our AI + human-powered lead generation system.
         </p>
       </div>
@@ -72,16 +81,16 @@ const Reviews = () => {
 };
 
 const ReviewCard = ({ review }) => (
-  <div className="flex-none bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow duration-300 w-80">
+  <div className="flex-none bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 w-80 border border-purple-100">
     <div className="flex items-center mb-2">
       <div className="flex gap-1">
         {Array.from({ length: review.rating }).map((_, i) => (
-          <Star key={i} className="w-5 h-5 text-yellow-400" />
+          <Star key={i} className="w-5 h-5 text-yellow-400 drop-shadow-sm" />
         ))}
       </div>
     </div>
-    <p className="text-gray-600 mb-3 text-sm">{review.text}</p>
-    <h3 className="text-md font-semibold text-gray-900">{review.name}</h3>
+    <p className="text-gray-700 md:text-base mb-3">{review.text}</p>
+    <h3 className="text-md md:text-lg font-semibold text-purple-700 drop-shadow-sm">{review.name}</h3>
     <span className="text-xs text-gray-400">{review.role}</span>
   </div>
 );

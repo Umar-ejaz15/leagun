@@ -1,6 +1,8 @@
 import React from "react";
 import { Search, LineChart, Users, Globe } from "lucide-react";
 import { Highlighter } from "@/components/magicui/highlighter";
+import BottomShape from "@/components/BottomShape";
+import TopShape from "@/components/TopShape";
 
 const services = [
   {
@@ -37,17 +39,24 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-white py-20 px-6 md:px-12">
+    <section className="relative  py-20 px-6 md:px-12">
+       <div className="absolute overflow-hidden blur-xl inset-0 -z-10 opacity-20">
+        <BottomShape />
+        <TopShape />
+      </div>
       <div className="max-w-5xl mx-auto text-center mb-16">
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold 
+                       bg-clip-text text-transparent 
+                       bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 
+                       drop-shadow-lg">
           Our{" "}
-          <Highlighter action="underline" color="red">
-            <span className="text-purple-600">
+          <Highlighter action="underline" color="purple">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
               Services
             </span>
           </Highlighter>
         </h2>
-        <p className="mt-4 text-gray-700 text-lg max-w-2xl mx-auto">
+        <p className="mt-4 text-gray-800 md:text-lg drop-shadow-sm max-w-2xl mx-auto">
           Everything you need to grow your business — powered by AI + human expertise.
         </p>
       </div>
@@ -56,17 +65,17 @@ const Services = () => {
         {services.map((item, i) => (
           <div
             key={i}
-            className="bg-white hover:bg-gray-50 transition shadow-sm hover:shadow-md rounded-sm p-6 text-left border border-gray-200"
+            className="bg-white hover:bg-purple-50 transition shadow-purple-200 shadow-md hover:shadow-lg rounded-xl p-6 text-left border border-purple-100"
           >
             <div className="flex items-center mb-4">
-              <div className="p-3 rounded-full  bg-purple-600 flex items-center justify-center">
+              <div className="p-3 rounded-full bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400 flex items-center justify-center shadow-lg">
                 {item.icon}
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+            <h3 className="text-xl md:text-2xl font-semibold text-purple-700 mb-2 drop-shadow-sm">
               {item.title}
             </h3>
-            <p className="text-gray-600 text-sm">{item.desc}</p>
+            <p className="text-gray-700 md:text-base">{item.desc}</p>
           </div>
         ))}
       </div>

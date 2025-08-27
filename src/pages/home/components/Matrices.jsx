@@ -28,16 +28,17 @@ const Matrices = () => {
   return (
     <section className="py-20 px-6 md:px-12 bg-gray-50">
       <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900">
+        <h2 className="text-4xl sm:text-5xl font-extrabold bg-clip-text text-transparent 
+                       bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-lg">
           Our{" "}
-          <Highlighter action="underline" color="red">
-            <span className="bg-clip-text text-purple-600">
+          <Highlighter action="underline" color="purple">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
               Impact
             </span>
           </Highlighter>
         </h2>
-        <p className="mt-4 text-gray-600 text-lg max-w-3xl mx-auto">
-          Numbers that tell how our AI + human expertise scales businesses effortlessly.
+        <p className="mt-4 text-gray-700 text-lg max-w-3xl mx-auto drop-shadow-sm">
+          Numbers that tell how our <span className="font-semibold text-purple-700">AI + human expertise</span> scales businesses effortlessly.
         </p>
       </div>
 
@@ -45,19 +46,19 @@ const Matrices = () => {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="p-6 rounded-md bg-white transition-all duration-300 flex flex-col items-center justify-center"
+            className="p-6 rounded-xl bg-purple-50 hover:bg-purple-100 transition-all duration-300 
+                       flex flex-col items-center justify-center shadow-purple-200 shadow-md hover:shadow-lg"
           >
-            <div className="flex gap-2">
-
-            <h3 className="text-4xl font-extrabold">
-
-              {counts[index]}
-            </h3>
-            <h3 className="text-4xl font-extrabold text-purple-900">
-              {stat.suffix}
-            </h3>
+            <div className="flex gap-2 items-baseline">
+              <h3 className="text-4xl font-extrabold bg-clip-text text-transparent 
+                             bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400 drop-shadow-md">
+                {counts[index]}
+              </h3>
+              <h3 className="text-4xl font-extrabold text-purple-700 drop-shadow-sm">
+                {stat.suffix}
+              </h3>
             </div>
-            <p className="mt-2 text-gray-500 font-medium text-center">{stat.label}</p>
+            <p className="mt-2 text-purple-800 font-medium text-center">{stat.label}</p>
           </div>
         ))}
       </div>
