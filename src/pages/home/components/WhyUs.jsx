@@ -56,7 +56,7 @@ const WhyUs = () => {
       {/* Heading */}
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight
-                       bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-lg">
+                       bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-lg w-full">
           Why Choose{" "}
           <Highlighter action="underline" color="purple">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
