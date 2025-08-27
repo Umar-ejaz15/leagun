@@ -8,12 +8,12 @@ const Footer = () => {
       {/* CTA Section */}
      
       {/* Footer Section */}
-      <footer className="bg-gray-100 py-12 px-6 md:px-12 mt-0">
+      <footer className=" py-12 px-6 md:px-12 mt-0">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo + Copy */}
           <div className="flex flex-col items-center md:items-start gap-2">
             <img
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+              src="logo.jpg"
               alt="Logo"
               className="h-10 w-auto"
             />

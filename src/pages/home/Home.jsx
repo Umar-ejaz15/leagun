@@ -15,7 +15,7 @@ const Home = () => {
     <div className="">
       {/* Hero Section */}
       <Hero />
-      <Matrices/>
+      <Matrices />
 
       {/* About Section */}
       <About />
@@ -35,8 +35,8 @@ const Home = () => {
       {/* FAQ Section */}
 
       <Faq3 />
-      
-      <Newsletter/>
+
+      <Newsletter />
 
       {/* Footer */}
       <Footer />

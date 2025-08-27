@@ -5,7 +5,7 @@ const Buttonrgb = ({txt}) => {
     <button className="">
       <a
         href="/contact"
-        className="inline-block rounded-md bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 px-6 py-2 text-sm font-semibold text-white shadow-md hover:opacity-90 transition"
+        className="inline-block rounded-md b border border-purple-600 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-purple-600 hover:text-white hover:opacity-90 transition"
       >
       {txt}
       </a>

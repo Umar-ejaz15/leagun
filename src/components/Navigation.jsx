@@ -1,157 +1,109 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "./ui/button";
 import Buttonrgb from "./Buttonrgb";
 
-const Navigation = () => {
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const links = [
+    { name: "Home", to: "/" },
+    { name: "About", to: "/about" },
+    { name: "Services", to: "/services" },
+    { name: "Contact", to: "/contact" },
+  ];
+
   return (
-    <header className="absolute inset-x-0 top-0 z-50  shadow-sm">
-      <nav
-        aria-label="Global"
-        className="flex items-center justify-between px-6 py-4 lg:px-12"
-      >
-        {/* Logo */}
-        <div className="flex items-center">
-          <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-            <img
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-              alt="Logo"
-              className="h-8 w-auto"
-            />
-            <span className="text-xl font-bold text-gray-900 tracking-tight">
-              LeadGun
-            </span>
-          </Link>
-        </div>
+    <nav className="bg-white shadow-md fixed w-full z-[100]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16 items-center">
+          {/* Logo */}
+          <div className="flex-shrink-0 text-2xl font-bold text-gray-800">
+           <img src="/logo.jpg" className="w-10 md:w-20" alt="" />
+          </div>
 
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex lg:items-center lg:gap-x-10">
-          <Link
-            to="/"
-            className="text-base font-medium text-gray-700 hover:text-indigo-600 relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:via-purple-600 after:to-pink-600 hover:after:w-full after:transition-all after:duration-300"
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className="text-base font-medium text-gray-700 hover:text-indigo-600 relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:via-purple-600 after:to-pink-600 hover:after:w-full after:transition-all after:duration-300"
-          >
-            About
-          </Link>
-          <Link
-            to="/services"
-            className="text-base font-medium text-gray-700 hover:text-indigo-600 relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:via-purple-600 after:to-pink-600 hover:after:w-full after:transition-all after:duration-300"
-          >
-            Services
-          </Link>
-          <Link
-            to="/contact"
-            className="text-base font-medium text-gray-700 hover:text-indigo-600 relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:via-purple-600 after:to-pink-600 hover:after:w-full after:transition-all after:duration-300"
-          >
-            Contact
-          </Link>
-        </div>
-
-        {/* CTA Button */}
-        <div className="hidden lg:flex">
-          <Buttonrgb txt="Book a Call" />
-        </div>
-
-        {/* Mobile menu button */}
-        <div className="lg:hidden flex items-center">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 hover:bg-gray-100"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              aria-hidden="true"
-              className="w-6 h-6"
-            >
-              <path
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-      </nav>
-
-      {/* Mobile Menu */}
-      <dialog id="mobile-menu" className="backdrop:bg-black/40 lg:hidden">
-        <div tabIndex="0" className="fixed inset-0 focus:outline-none">
-          <div className="fixed inset-y-0 right-0 z-50 w-full sm:max-w-sm bg-white shadow-lg p-6">
-            <div className="flex items-center justify-between">
-              <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-                <img
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                  alt=""
-                  className="h-8 w-auto"
-                />
-                <span className="text-lg font-bold text-gray-900">LeadGun</span>
-              </Link>
-              <button
-                type="button"
-                className="-m-2.5 rounded-md p-2.5 text-gray-700 hover:bg-gray-100"
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-6">
+            {links.map((link) => (
+              <Link
+                key={link.name}
+                to={link.to}
+                className="text-gray-700 hover:text-blue-600 transition-colors"
               >
-                <span className="sr-only">Close menu</span>
+                {link.name}
+              </Link>
+            ))}
+          </div>
+          <div className="hidden md:block ">
+
+          <Buttonrgb  txt="Schedule a Call →"/>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 focus:outline-none"
+            >
+              {isOpen ? (
                 <svg
-                  viewBox="0 0 24 24"
+                  className="w-6 h-6"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="1.5"
-                  aria-hidden="true"
-                  className="w-6 h-6"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M6 18 18 6M6 6l12 12"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
-              </button>
-            </div>
-            <div className="mt-6 space-y-4">
-              <Link
-                to="/"
-                className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50"
-              >
-                Home
-              </Link>
-              <Link
-                to="/about"
-                className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50"
-              >
-                About
-              </Link>
-              <Link
-                to="/services"
-                className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50"
-              >
-                Services
-              </Link>
-              <Link
-                to="/contact"
-                className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50"
-              >
-                Contact
-              </Link>
-            </div>
-            <div className="mt-6">
-              <Button className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg text-base font-semibold shadow-md hover:opacity-90 transition">
-                Book a Call →
-              </Button>
-            </div>
+              ) : (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
-      </dialog>
-    </header>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-white shadow-md">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            {links.map((link) => (
+              <Link
+                key={link.name}
+                to={link.to}
+                onClick={() => setIsOpen(false)}
+                className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+          <div className="py-5">
+
+          <Buttonrgb txt="Schedule a Call →"/>
+          </div>
+
+        </div>
+      )}
+    </nav>
   );
 };
 
-export default Navigation;
+export default Navbar;
