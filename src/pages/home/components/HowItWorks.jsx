@@ -29,7 +29,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="relative  flex flex-col justify-center items-center  py-20 px-6 md:px-12">
+    <section className="relative overflow-hidden  flex flex-col justify-center items-center  py-20 px-6 md:px-12">
       <div className=" absolute blur-3xl overflow-hidden">
         <BottomShape />
         <TopShape />

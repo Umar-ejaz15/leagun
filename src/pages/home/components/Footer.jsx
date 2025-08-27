@@ -8,7 +8,7 @@ const Footer = () => {
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-20 px-6 md:px-12 text-center rounded-b-3xl">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-6">
-          Ready to skyrocket your leads? 🚀
+          Ready to skyrocket your leads?
         </h2>
         <p className="text-lg sm:text-xl text-white mb-8 max-w-2xl mx-auto">
           Schedule a call and let our AI + human hybrid system supercharge your sales pipeline.  
