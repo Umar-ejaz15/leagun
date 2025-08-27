@@ -4,7 +4,7 @@ import { Highlighter } from "@/components/magicui/highlighter";
 
 const WhyUs = () => {
   return (
-    <section className="relative w-full bg-white py-20 px-6 md:px-12">
+    <section className="relative w-full  py-20 px-6 md:px-12">
       <div className="max-w-7xl mx-auto text-center">
         {/* Section Heading */}
         <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">

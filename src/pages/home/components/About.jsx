@@ -6,9 +6,9 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="relative bg-white px-6 py-24 sm:py-32 lg:px-0">
-      <div className=" absolute overflow-hidden blur-xl ">
-        <BottomShape />
+    <div className="relative px-6 py-24 sm:py-32 lg:px-0">
+      <div className=" absolute overflow-hidden blur-xl left-0  ">
+        
       </div>
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
         {/* Left Text Section */}
@@ -21,15 +21,18 @@ const About = () => {
               <h1 className="mt-2 text-4xl font-extrabold tracking-tight bg-clip-text text-zinc-900 sm:text-4 xl">
                 Your{" "}
                 <Highlighter action="underline" color="#FF9800">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">Growth Engine</span>
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+                    Growth Engine
+                  </span>
                 </Highlighter>{" "}
                 for Leads & Revenue
               </h1>
               <p className="mt-6 text-lg text-gray-700">
                 At{" "}
-
-                <span className="font-semibold text-red-600">{"  "}LeadGun{"  "}</span>,
-                {"  "}we help businesses scale faster by combining AI-driven
+                <span className="font-semibold text-red-600">
+                  {"  "}LeadGun{"  "}
+                </span>
+                ,{"  "}we help businesses scale faster by combining AI-driven
                 strategies, human expertise, and proven systems. From generating
                 high-quality leads to automating workflows, our AI-powered SaaS
                 solutions keep your pipeline full and predictable.
@@ -39,11 +42,11 @@ const About = () => {
         </div>
 
         {/* Right Image */}
-        <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <div className="-mt-12 -ml-12 p-12 lg:sticky right-0 lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
             src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
             alt="AI Dashboard"
-            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-200 sm:w-228"
+            className="w-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-200 "
           />
         </div>
 
