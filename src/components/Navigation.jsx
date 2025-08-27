@@ -27,7 +27,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.to}
-                className="text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-gray-700 hover:text-purple-600 transition-colors"
               >
                 {link.name}
               </Link>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 key={link.name}
                 to={link.to}
                 onClick={() => setIsOpen(false)}
-                className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded transition-colors"
+                className="block text-gray-700 hover:text-purple-600 px-3 py-2 rounded transition-colors"
               >
                 {link.name}
               </Link>
