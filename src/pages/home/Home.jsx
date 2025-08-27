@@ -8,6 +8,7 @@ import Reviews from "./components/Reviews";
 import Faq3 from "./components/FAQ";
 import Footer from "./components/Footer";
 import Matrices from "./components/Matrices";
+import Newsletter from "./components/Newsletter";
 
 const Home = () => {
   return (
@@ -32,7 +33,10 @@ const Home = () => {
       <Reviews />
 
       {/* FAQ Section */}
+
       <Faq3 />
+      
+      <Newsletter/>
 
       {/* Footer */}
       <Footer />

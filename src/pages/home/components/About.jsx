@@ -7,9 +7,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="relative px-6 py-24 sm:py-32 lg:px-0">
-      <div className=" absolute overflow-hidden blur-xl left-0  ">
-        
-      </div>
+      <div className=" absolute overflow-hidden blur-xl left-0  "></div>
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
         {/* Left Text Section */}
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
@@ -97,13 +95,20 @@ const About = () => {
                 that works for you. Let us help you dominate your niche with AI.
               </p>
 
-              {/* CTA */}
-              <div className="mt-6 w-full">
-                <Buttonrgb className="" txt="Schedule a Free Strategy Call →" />
-              </div>
+             
             </div>
           </div>
         </div>
+      </div>
+      <div className="bg-gradient-to-r mt-10 from-blue-600 via-purple-600 to-pink-600 py-20 px-6 md:px-12 text-center rounded-b-3xl">
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-6">
+          Ready to skyrocket your leads?
+        </h2>
+        <p className="text-lg sm:text-xl text-white mb-8 max-w-2xl mx-auto">
+          Schedule a call and let our AI + human hybrid system supercharge your
+          sales pipeline. No fluff, real results.
+        </p>
+        <Buttonrgb txt="Schedule a Call →" />
       </div>
     </div>
   );
