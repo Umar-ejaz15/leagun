@@ -36,7 +36,7 @@ const HowItWorks = () => {
       </div>
 
       {/* Heading */}
-      <div className="max-w-5xl mx-auto text-center mb-16 relative z-10">
+      <div className="max-w-7xl mx-auto text-center mb-16 relative z-10">
         <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-extrabold leading-tight mb-6">
           How It{" "}
           <Highlighter action="underline" color="white">

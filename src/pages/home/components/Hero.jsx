@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto">
+      <div className="relative z-10 flex flex-col items-center text-center max-w-7xl mx-auto">
         
         {/* Banner */}
         <div className="hidden sm:flex justify-center mb-6">
