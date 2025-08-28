@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import TopShape from "@/components/TopShape";
 import BottomShape from "@/components/BottomShape";
@@ -11,59 +10,42 @@ function FAQItem({ question, answer, index }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.1, ease: "easeOut" }}
-      className={cn(
-        "group border border-gray-200 rounded-2xl bg-white transition-all duration-300",
-        isOpen
-          ? "shadow-lg shadow-purple-200/50"
-          : "hover:shadow-md hover:shadow-purple-100/40"
-      )}
+      transition={{ duration: 0.3, delay: index * 0.1 }}
+      className={`rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-lg shadow-sm hover:shadow-md transition-all duration-300`}
     >
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center justify-between gap-4 px-5 py-4"
+        className="flex w-full items-center justify-between gap-4 px-6 py-4"
       >
         <h3
-          className={cn(
-            "text-left text-lg sm:text-xl font-medium text-gray-900 transition-colors duration-300",
-            isOpen && "text-purple-600"
-          )}
+          className={`text-left font-semibold text-gray-900 text-lg md:text-xl transition-colors ${
+            isOpen ? "text-purple-600" : "hover:text-purple-500"
+          }`}
         >
           {question}
         </h3>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="shrink-0 rounded-full p-1 bg-gray-100 text-gray-600 transition-transform"
+          transition={{ duration: 0.3 }}
+          className="shrink-0 rounded-full p-2 bg-purple-50 text-purple-600"
         >
           <ChevronDown className="h-5 w-5" />
         </motion.div>
       </button>
 
-      <AnimatePresence initial={false}>
+      <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{
-              height: "auto",
-              opacity: 1,
-              transition: { height: { duration: 0.4 }, opacity: { duration: 0.3, delay: 0.05 } },
-            }}
-            exit={{ height: 0, opacity: 0, transition: { height: { duration: 0.3 }, opacity: { duration: 0.2 } } }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.4 }}
           >
-            <div className="border-t text-left border-gray-100 px-5 py-3">
-              <motion.p
-                initial={{ y: -5, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -5, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="text-gray-700 text-sm sm:text-md leading-relaxed"
-              >
-                {answer}
-              </motion.p>
+            <div className="border-t border-purple-100 bg-purple-50/50 px-6 py-4 rounded-b-2xl">
+              <p className="text-gray-700 text-base leading-relaxed">{answer}</p>
             </div>
           </motion.div>
         )}
@@ -72,7 +54,7 @@ function FAQItem({ question, answer, index }) {
   );
 }
 
-export default function Faq3() {
+export default function FAQSection() {
   const faqs = [
     { question: "Is my data secure on your platform?", answer: "Yes, we prioritize security with end-to-end encryption and GDPR compliance." },
     { question: "How accurate are the AI-generated leads?", answer: "Over 90% accuracy using advanced ML and real-time validation." },
@@ -82,32 +64,42 @@ export default function Faq3() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 ">
-       <div className="absolute overflow-hidden blur-xl inset-0 z-0 opacity-20">
-              <TopShape />
-              <BottomShape />
-            </div>
-      <div className="relative mx-auto max-w-3xl text-center">
+    <section className="relative py-20 px-6 sm:px-10 md:px-16 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+      {/* Background Shapes */}
+      <div className="absolute inset-0 blur-3xl opacity-20 -z-10">
+        <TopShape />
+        <BottomShape />
+      </div>
+
+      <div className="max-w-4xl mx-auto text-center">
         <Badge
           variant="outline"
-          className="border border-purple-400 bg-gradient-to-r from-purple-100 via-purple-200 to-purple-100 text-purple-700 mb-4 px-4 py-1 text-lg sm:text-xl font-semibold tracking-widest uppercase"
+          className="border border-purple-300 bg-purple-50 text-purple-700 px-4 py-1 mb-4 text-sm font-semibold tracking-wide"
         >
           FAQs
         </Badge>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold
-                       bg-clip-text text-transparent
-                       bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400
-                       drop-shadow-lg mb-2">
+        <h2 className="text-[clamp(2rem,4vw,3rem)] font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 mb-3">
           Frequently Asked Questions
         </h2>
-        <p className="text-gray-600 text-sm sm:text-md">
+        <p className="text-gray-600 text-base md:text-lg mb-8">
           Everything you need to know about LeadGun
         </p>
 
-        <div className="mt-8 space-y-3">
+        <dl className="space-y-4">
           {faqs.map((faq, index) => (
             <FAQItem key={index} {...faq} index={index} />
           ))}
+        </dl>
+
+        {/* CTA */}
+        <div className="mt-10 text-center">
+          <p className="text-gray-700 mb-4">Still have questions?</p>
+          <a
+            href="#contact"
+            className="inline-block px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition"
+          >
+            Contact Us
+          </a>
         </div>
       </div>
     </section>

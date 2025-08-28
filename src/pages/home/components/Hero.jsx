@@ -8,36 +8,28 @@ import Buttonrgb from "@/components/Buttonrgb";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center pt-4 sm:pt-16 md:pt-28 bg-white overflow-hidden">
+    <section className="relative w-full min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center bg-white overflow-hidden px-4 sm:px-6 md:px-12 lg:px-24 pt-8 sm:pt-16 md:pt-24">
       
       {/* Background Shapes */}
-      <div className="absolute blur-xl inset-0 z-0 opacity-20">
-        <BottomShape />
+      <div className="absolute inset-0 z-0 opacity-10 blur-3xl">
         <TopShape />
+        <BottomShape />
       </div>
 
-      <div className="absolute inset-0 z-10">
-        <div className="absolute inset-x-0 -top-40 sm:-top-80 transform-gpu blur-3xl overflow-hidden opacity-20">
-          <TopShape />
-        </div>
-        <div className="absolute inset-x-0 bottom-[-10rem] sm:bottom-[-15rem] transform-gpu blur-3xl overflow-hidden opacity-20">
-          <BottomShape />
-        </div>
-      </div>
-
-      {/* Hero Content */}
-      <div className="relative z-50 flex flex-col items-center text-center max-w-full px-4 sm:px-6 md:px-12 lg:px-24">
+      {/* Main Content */}
+      <div className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto">
         
         {/* Banner */}
         <div className="hidden sm:flex justify-center mb-6">
-          <div className="flex items-center gap-2 rounded-full px-4 py-1 text-xs sm:text-sm font-medium bg-purple-100 text-purple-900 shadow-purple-300 shadow-md">
-            <RocketIcon className="w-4 h-4 sm:w-5 sm:h-5 text-purple-700" />
+          <div className="flex items-center gap-2 rounded-full px-5 py-1.5 text-sm font-medium bg-purple-100 text-purple-800 shadow-md">
+            <RocketIcon className="w-4 h-4 text-purple-600" />
             AI-Powered Lead Generation for Businesses
           </div>
         </div>
 
-        {/* Main Heading */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-snug sm:leading-tight md:leading-tight lg:leading-tight max-w-4xl mx-auto">
+        {/* Heading */}
+        <h1 className="font-extrabold tracking-tight leading-snug text-gray-900 
+                      text-[clamp(1.75rem,4vw,3.5rem)] max-w-4xl">
           Drive{" "}
           <Highlighter action="underline" color="purple">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
@@ -57,7 +49,7 @@ const Hero = () => {
         </h1>
 
         {/* Subheading */}
-        <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto text-gray-800 drop-shadow-sm">
+        <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl">
           Leverage{" "}
           <span className="font-semibold text-purple-700">AI-driven Agents</span>
           , <span className="font-semibold text-purple-700">Human Experts</span>
@@ -66,23 +58,26 @@ const Hero = () => {
           to boost your sales pipeline and maximize ROI.
         </p>
 
-        {/* Secondary Tagline */}
-        <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl">
-          Imagine consistently filling your calendar with qualified leads, without wasting time or money on guesswork. Our AI + human hybrid ensures precision targeting every time.
+        {/* Secondary Line */}
+        <p className="mt-3 text-sm sm:text-base text-gray-600 max-w-3xl">
+          Imagine consistently filling your calendar with qualified leads without guesswork. Our AI + Human Hybrid ensures precision targeting every time.
         </p>
 
         {/* Video */}
-        <div className="mt-6 sm:mt-8  shadow-purple-600 shadow-2xl rounded-3xl overflow-hidden">
-          <Video />
+        <div className="mt-8 w-full max-w-3xl rounded-3xl overflow-hidden  shadow-2xl shadow-purple-600 ">
+          <div className="aspect-w-16 aspect-h-9">
+            <Video />
+          </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="mt-6 mb-6">
+        {/* CTA */}
+        <div className="mt-8">
           <Buttonrgb
             txt="Schedule a Call →"
             className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-500 
-                       hover:from-purple-700 hover:via-purple-800 hover:to-purple-600 
-                       text-white shadow-purple-400 shadow-lg hover:shadow-2xl transition-all duration-300 px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base"
+                      hover:from-purple-700 hover:via-purple-800 hover:to-purple-600 
+                      text-white shadow-purple-400 shadow-lg hover:shadow-2xl transition-all duration-300 
+                      px-8 py-4 text-base font-semibold rounded-full"
           />
         </div>
       </div>

@@ -9,12 +9,25 @@ import Faq3 from "./components/FAQ";
 import Footer from "./components/Footer";
 import Matrices from "./components/Matrices";
 import Newsletter from "./components/Newsletter";
+import ClientLogos from "./components/ClientLogos";
+import Pricing from "./components/Pricing";
+import CaseStudies from "./components/CaseStudies";
+import FinalCTA from "./components/FinalCta";
+import StickyCTA from "./components/StickyCTA";
 
 const Home = () => {
   return (
     <div className="">
+      {/* Floating CTA */}
+      <StickyCTA />
+
       {/* Hero Section */}
       <Hero />
+
+      {/* Client Logos */}
+      <ClientLogos />
+
+      {/* Key Metrics */}
       <Matrices />
 
       {/* About Section */}
@@ -29,13 +42,22 @@ const Home = () => {
       {/* Services Section */}
       <Services />
 
+      {/* Case Studies */}
+      <CaseStudies />
+
       {/* Client Reviews */}
       <Reviews />
 
       {/* FAQ Section */}
-
       <Faq3 />
 
+      {/* Pricing */}
+      <Pricing />
+
+      {/* Final Bold CTA */}
+      <FinalCTA />
+
+      {/* Newsletter */}
       <Newsletter />
 
       {/* Footer */}

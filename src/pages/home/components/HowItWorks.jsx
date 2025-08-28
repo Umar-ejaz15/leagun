@@ -1,85 +1,81 @@
 import React from "react";
 import { Brain, Target, Users, BarChart } from "lucide-react";
 import { Highlighter } from "@/components/magicui/highlighter";
-import BottomShape from "@/components/BottomShape";
-import TopShape from "@/components/TopShape";
+import { motion } from "framer-motion";
 
 const HowItWorks = () => {
   const steps = [
     {
-      icon: <Brain className="w-6 h-6 text-white" />,
+      icon: Brain,
       title: "AI Analysis",
       desc: "We use AI to analyze your audience and market for precision targeting.",
     },
     {
-      icon: <Target className="w-6 h-6 text-white" />,
+      icon: Target,
       title: "Strategy Setup",
       desc: "Custom campaigns crafted to dominate local searches and generate leads.",
     },
     {
-      icon: <Users className="w-6 h-6 text-white" />,
+      icon: Users,
       title: "Lead Generation",
       desc: "AI agents + human experts drive high-quality, conversion-ready leads.",
     },
     {
-      icon: <BarChart className="w-6 h-6 text-white" />,
+      icon: BarChart,
       title: "Scale & Optimize",
       desc: "Track KPIs, refine strategies, and scale revenue without limits.",
     },
   ];
 
   return (
-    <section className="relative flex flex-col justify-center items-center py-20 px-6 md:px-12 bg-white">
-       <div className="absolute overflow-hidden blur-xl inset-0 z-0 opacity-20">
-        <TopShape />
-        <BottomShape />
+    <section className="relative py-24 px-6 md:px-12 bg-gradient-to-r from-purple-600 via-purple-700 to-purple-900 text-white overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-purple-400 rounded-full blur-3xl opacity-20" />
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-pink-500 rounded-full blur-3xl opacity-20" />
       </div>
-      <div className="max-w-6xl mx-auto text-center mb-14">
 
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold 
-                       bg-clip-text text-transparent 
-                       bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 
-                       drop-shadow-lg">
+      {/* Heading */}
+      <div className="max-w-5xl mx-auto text-center mb-16 relative z-10">
+        <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-extrabold leading-tight mb-6">
           How It{" "}
-          <Highlighter action="underline" color="purple">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
-              Works
-            </span>
+          <Highlighter action="underline" color="white">
+            Works
           </Highlighter>
         </h2>
-        <p className="text-lg md:text-xl text-gray-800 mt-4 max-w-2xl mx-auto drop-shadow-sm">
-          A clear, proven 4-step system to help you dominate local search and
-          flood your inbox with leads.
+        <p className="text-lg md:text-xl text-purple-100 max-w-2xl mx-auto">
+          A simple, powerful 4-step process to dominate local search and flood your inbox with quality leads.
         </p>
       </div>
 
-      {/* Timeline */}
-      <div className="relative border-l-2 border-purple-200 ml-8 md:ml-16">
-        {steps.map((step, i) => (
-          <div key={i} className="mb-14 relative pl-10">
-            {/* Connector Dot */}
-            <div className="absolute -left-4 top-0">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400 
-                              flex items-center justify-center shadow-lg">
-                {step.icon}
+      {/* Steps */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto relative z-10">
+        {steps.map((step, i) => {
+          const Icon = step.icon;
+          return (
+            <motion.div
+              key={i}
+              className="relative bg-white/10 backdrop-blur-xl rounded-2xl p-8 text-center border border-purple-300 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.2, duration: 0.6 }}
+             
+            >
+              {/* Step Number */}
+              <div className="absolute -top-6 left-6 text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-200 to-purple-500 opacity-20">
+                {i + 1}
               </div>
-            </div>
 
-            {/* Step Number */}
-            <span className="text-4xl md:text-5xl font-extrabold 
-                             bg-clip-text text-transparent 
-                             bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 
-                             absolute -left-16 top-0 hidden md:block drop-shadow-md">
-              {i + 1}
-            </span>
+              {/* Icon */}
+              <div className="w-16 h-16 mx-auto rounded-xl bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center mb-6 shadow-lg">
+                <Icon className="w-8 h-8 text-white" />
+              </div>
 
-            {/* Step Content */}
-            <h3 className="text-xl md:text-2xl font-semibold text-purple-700 drop-shadow-sm">
-              {step.title}
-            </h3>
-            <p className="text-gray-700 md:text-lg mt-1">{step.desc}</p>
-          </div>
-        ))}
+              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+              <p className="text-purple-100 text-sm leading-relaxed">{step.desc}</p>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );
