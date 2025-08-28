@@ -13,12 +13,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full z-[100] bg-white/80 backdrop-blur-md shadow-md transition-all">
+    <nav className="fixed w-full z-[100] bg-white backdrop-blur-md shadow-md transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <div className="flex-shrink-0 text-2xl font-bold text-gray-800">
-            <img src="/logo.jpg" className="w-10 md:w-20" alt="Logo" />
+          <div className="flex-shrink-0 text-2xl rounded-full font-bold text-gray-800">
+            <img src="/logo.jpg" className="w-10 roundfu md:w-20" alt="Logo" />
           </div>
 
           {/* Desktop Menu */}
