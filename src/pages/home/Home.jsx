@@ -12,8 +12,8 @@ import Newsletter from "./components/Newsletter";
 import ClientLogos from "./components/ClientLogos";
 import Pricing from "./components/Pricing";
 import CaseStudies from "./components/CaseStudies";
-import FinalCTA from "./components/FinalCta";
 import StickyCTA from "./components/StickyCTA";
+import Final from "./components/Final";
 
 const Home = () => {
   return (
@@ -55,7 +55,7 @@ const Home = () => {
       <Pricing />
 
       {/* Final Bold CTA */}
-      <FinalCTA />
+      <Final />
 
       {/* Newsletter */}
       <Newsletter />

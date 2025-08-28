@@ -1,7 +1,7 @@
 import React from "react";
 import Buttonrgb from "@/components/Buttonrgb";
 
-const FinalCTA = () => {
+const Final = () => {
   return (
     <section className="relative bg-gradient-to-br from-purple-600 via-purple-700 to-purple-900 text-white py-20 px-6 md:px-12 overflow-hidden rounded-t-3xl">
       {/* Background Glow */}
@@ -35,4 +35,4 @@ const FinalCTA = () => {
   );
 };
 
-export default FinalCTA;
+export default Final;
