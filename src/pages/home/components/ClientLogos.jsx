@@ -12,26 +12,36 @@ const logos = [
 
 const ClientLogos = () => {
   return (
-    <section className="relative bg-gradient-to-r from-purple-50 via-white to-purple-50 py-16">
+    <section className="relative py-20 bg-gradient-to-r from-purple-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-10">
-          Trusted by leading service businesses
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-16">
+          Trusted by Leading Brands
         </h2>
-        
-        <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+
+        <motion.div 
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-10 items-center justify-center"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.15 } }
+          }}
         >
           {logos.map((logo, i) => (
-            <motion.img
+            <motion.div
               key={i}
-              src={logo.src}
-              alt={logo.alt}
-              className="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 transition duration-300 mx-auto"
-              whileHover={{ scale: 1.1 }}
-            />
+              className="p-4 rounded-2xl bg-white/20 backdrop-blur-md border border-purple-200 shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 flex items-center justify-center"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 }
+              }}
+            >
+              <img 
+                src={logo.src} 
+                alt={logo.alt} 
+                className="h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300" 
+              />
+            </motion.div>
           ))}
         </motion.div>
       </div>

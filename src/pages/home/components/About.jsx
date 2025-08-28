@@ -123,9 +123,9 @@ const About = () => {
 
         {/* Right Graph */}
         <div className="flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-lg h-80 bg-white rounded-2xl shadow-lg border border-purple-100 shadow-purple-600 p-6 hover:shadow-2xl transition-all duration-300">
+          <div className="relative w-full max-w-lg h-80 bg-white rounded-2xl shadow-lg border border-purple-100 p-6  transition-all duration-300">
             <Line data={data} options={options} />
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-tr from-purple-500 to-purple-300 rounded-full blur-3xl opacity-30"></div>
+          
           </div>
         </div>
       </div>

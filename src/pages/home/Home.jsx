@@ -25,7 +25,7 @@ const Home = () => {
       <Hero />
 
       {/* Client Logos */}
-      <ClientLogos />
+      {/* <ClientLogos /> */}
 
       {/* Key Metrics */}
       <Matrices />
