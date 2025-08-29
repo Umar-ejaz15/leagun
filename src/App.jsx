@@ -4,13 +4,12 @@ import { Routes, Route } from "react-router-dom";
 import About from "./pages/about/About";
 import Services from "./pages/services/Services";
 import Contact from "./pages/contact/Contact";
-import { inject } from "@vercel/analytics";
-
-inject();
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
     <div>
+      <Analytics />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
