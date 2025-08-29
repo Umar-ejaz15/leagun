@@ -3,12 +3,12 @@ import { Highlighter } from "@/components/magicui/highlighter";
 import { motion } from "framer-motion";
 
 const teamMembers = [
-  { name: "Umar Ejaz", role: "Frontend & Backend Developer", img: "/team/umar.jpg" },
-  { name: "Usaid Hassan", role: "UI/UX Designer", img: "/team/usaid.jpg" },
-  { name: "Ali Zafar", role: "Backend Developer", img: "/team/ali.jpg" },
-  { name: "Okasha", role: "Flutter Developer", img: "/team/okasha.jpg" },
-  { name: "Sarah Khan", role: "Marketing Specialist", img: "/team/sarah.jpg" },
-  { name: "John Doe", role: "AI Researcher", img: "/team/john.jpg" },
+  { name: "Umar Ejaz", role: "Frontend & Backend Developer", img: "/pic.png" },
+  { name: "Usaid Hassan", role: "UI/UX Designer", img: "/pic.png" },
+  { name: "Ali Zafar", role: "Backend Developer", img: "/pic.png" },
+  { name: "Okasha", role: "Flutter Developer", img: "/pic.png" },
+  { name: "Sarah Khan", role: "Marketing Specialist", img: "/pic.png" },
+  { name: "John Doe", role: "AI Researcher", img: "/pic.png" },
   // Add as many as you want
 ];
 
@@ -35,17 +35,23 @@ const Team = () => {
       </div>
 
       {/* Horizontal Scrollable Team */}
-      <div className="relative team-scroll z-10 h-auto flex gap-8 overflow-y-hidden  overflow-x-auto snap-x snap-mandatory px-6 sm:px-12 py-4">
+      <div className="relative team-scroll z-10 h-auto flex gap-2 overflow-y-hidden  overflow-x-auto snap-x snap-mandatory px-6  sm:px-12 py-4">
         {teamMembers.map((member, i) => (
           <motion.div
             key={i}
-            className="flex-shrink-0 w-80 sm:w-96 bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center h-auto border border-purple-300 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 snap-start"
+            className="flex-shrink-0 w-80 sm:w-96 bg-white/10 backdrop-blur-xl rounded-md p-8 text-center h-auto border border-purple-300 shadow-xl hover:border hover:border-purple-600 transition-all duration-300 snap-start"
           >
             <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-white/30 mb-6">
-              <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
+              <img
+                src={member.img}
+                alt={member.name}
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="text-2xl font-bold mb-1">{member.name}</h3>
-            <p className="text-purple-100 text-lg leading-relaxed">{member.role}</p>
+            <p className="text-purple-100 text-lg leading-relaxed">
+              {member.role}
+            </p>
           </motion.div>
         ))}
       </div>

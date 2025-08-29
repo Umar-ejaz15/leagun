@@ -33,7 +33,7 @@ const Milestones = () => {
   ];
 
   return (
-    <section className="relative py-24 px-6 md:px-12 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+    <section className="relative py-24 px-6 md:px-12 bg-gray-50 overflow-hidden">
       {/* Background Shapes */}
       <div className="absolute inset-0 -z-10 opacity-10 blur-xl">
         <TopShape />
@@ -58,7 +58,7 @@ const Milestones = () => {
         {milestones.map((item, i) => (
           <div
             key={i}
-            className="relative bg-white rounded-3xl shadow-lg p-8 text-center hover:shadow-2xl transition-all duration-300"
+            className="relative bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-all duration-300"
           >
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center text-white shadow-lg">
               {item.icon}

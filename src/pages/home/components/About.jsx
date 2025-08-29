@@ -132,7 +132,7 @@ const About = () => {
 
       {/* CTA */}
       <div className="mt-16 max-w-5xl mx-auto text-center bg-white/60 backdrop-blur-xl rounded-2xl shadow-md px-8 py-14 border border-purple-100">
-        <h2 className="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-gray-900 mb-4">
+        <h2 className="text-[clamp(1.8rem,4vw,2.5rem)] bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400 font-extrabold mb-4">
           Want to learn more about how we can help you?
         </h2>
         <p className="text-gray-700 text-base sm:text-lg md:text-xl mb-8 max-w-3xl mx-auto">

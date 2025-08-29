@@ -3,7 +3,7 @@ import Buttonrgb from "@/components/Buttonrgb";
 
 const Final = () => {
   return (
-    <section className="relative bg-gradient-to-br from-purple-600 via-purple-700 to-purple-900 text-white py-20 px-6 md:px-12 overflow-hidden rounded-t-3xl">
+    <section className="relative bg-gradient-to-br from-purple-600 via-purple-700 to-purple-900 text-white py-20 px-6 md:px-12 overflow-hidden ">
       {/* Background Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.1),transparent_70%)] pointer-events-none"></div>
 

@@ -8,7 +8,7 @@ const Newsletter = () => {
   const mailchimpURL = "https://YOUR_MAILCHIMP_URL_HERE"; // replace this
 
   return (
-    <section className="relative bg-gradient-to-br from-purple-50 via-white to-purple-50 py-16 px-6 sm:px-12 lg:px-24 text-center rounded-3xl shadow-xl overflow-hidden">
+    <section className="relative bg-gradient-to-br from-purple-50 via-white to-purple-50 py-16 px-6 sm:px-12 lg:px-24 text-center  shadow-xl overflow-hidden">
       {/* Background Decorative Shapes */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(139,92,246,0.2),transparent_60%)] blur-3xl"></div>
 

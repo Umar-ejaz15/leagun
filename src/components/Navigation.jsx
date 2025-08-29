@@ -27,7 +27,11 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.to}
-                className="text-gray-700 hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:via-purple-700 hover:to-purple-400 transition-all font-medium px-2 py-1 rounded-md"
+                className="relative text-gray-700 font-medium px-2 py-1 rounded-md 
+             hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r 
+             hover:from-purple-500 hover:via-purple-700 hover:to-purple-400
+             after:block after:h-[2px] after:bg-purple-500 after:w-0 
+             hover:after:w-full after:transition-all after:duration-300"
               >
                 {link.name}
               </Link>

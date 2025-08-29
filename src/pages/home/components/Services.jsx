@@ -62,13 +62,13 @@ const Services = () => {
       </div>
 
       {/* Service Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-6xl mx-auto">
         {services.map((item, i) => {
           const Icon = item.icon;
           return (
             <div
               key={i}
-              className="group relative bg-white/80 backdrop-blur-xl rounded-2xl p-8 border border-purple-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="group relative bg-white/80 backdrop-blur-xl rounded-xl p-8 border border-purple-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               {/* Icon */}
               <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center mb-6 text-white shadow-lg group-hover:scale-110 transition-transform">

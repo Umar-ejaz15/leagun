@@ -5,19 +5,19 @@ const caseStudies = [
   {
     title: "Boosted Local SEO for HVAC Company",
     desc: "Increased organic traffic by 150% and generated 200+ new leads in 3 months.",
-    img: "https://via.placeholder.com/600x400", // Replace with real dashboard/chart image
+    img: "/pic.png", // Replace with real dashboard/chart image
     metrics: ["+150% Traffic", "200+ Leads", "Top 3 on Google"],
   },
   {
     title: "Plumbing Business Domination",
     desc: "Ranked #1 for local keywords, increasing revenue by 80% within 90 days.",
-    img: "https://via.placeholder.com/600x400",
+    img: "/pic.png",
     metrics: ["#1 Rankings", "+80% Revenue", "50% Lower Ad Spend"],
   },
   {
     title: "Electrical Contractor Growth",
     desc: "Scaled client acquisition with GBP optimization and backlink strategy.",
-    img: "https://via.placeholder.com/600x400",
+    img: "/pic.png",
     metrics: ["+120% Calls", "10K Monthly Visits", "High DA Backlinks"],
   },
 ];

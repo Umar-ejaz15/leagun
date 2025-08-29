@@ -51,7 +51,7 @@ const Values = () => {
           return (
             <motion.div
               key={i}
-              className="relative bg-white/80 backdrop-blur-xl rounded-2xl p-10 border border-purple-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center"
+              className="relative bg-white/80 backdrop-blur-xl rounded-xl p-10 border border-purple-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.2, duration: 0.6 }}

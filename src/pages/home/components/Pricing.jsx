@@ -73,7 +73,7 @@ const Pricing = () => {
   const [billing, setBilling] = useState("monthly");
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-purple-50 via-white to-purple-100">
+    <section id="pricing" className="relative py-20 bg-gradient-to-b from-purple-50 via-white to-purple-100">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-gray-800 mb-4">

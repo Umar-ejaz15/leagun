@@ -73,13 +73,13 @@ const WhyUs = () => {
       </div>
 
       {/* Features Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 max-w-6xl mx-auto">
         {features.map((item, i) => {
           const Icon = item.icon;
           return (
             <div
               key={i}
-              className="group bg-white/80 backdrop-blur-md hover:bg-purple-50/90 transition-all duration-300 rounded-2xl p-8 border border-purple-100 shadow-sm hover:shadow-xl hover:-translate-y-1"
+              className="group bg-white/80 backdrop-blur-md hover:bg-purple-50/90 transition-all duration-300 rounded-xl p-8 border border-purple-100 shadow-sm hover:shadow-xl hover:-translate-y-1"
             >
               <div className="flex items-center mb-5">
                 <div className="p-4 rounded-xl bg-gradient-to-r from-purple-500 to-purple-600 text-white shadow-md group-hover:scale-110 transition-transform">
