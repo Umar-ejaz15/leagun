@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const TopShape = () => {
   return (
     <div
-      style={{
-        clipPath:
-          'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-      }}
-      className="relative left-[calc(50%-8rem)] w-[20rem] aspect-[1155/678] -translate-x-1/2 rotate-30 bg-gradient-to-tr from-red-600 via-blue-600 to-pink-600 opacity-40 sm:left-[calc(50%-12rem)] sm:w-[32rem]"
+      className="absolute left-0 top-1/3 -translate-x-1/2 
+                 w-[35rem] h-[35rem] sm:w-[28rem] sm:h-[28rem] 
+                 rounded-full 
+                 bg-gradient-to-bl from-red-500 via-purple-600 to-pink-500 
+                 blur-3xl opacity-40 
+                 animate-morph-slow animate-spin-slow"
     />
   );
 };

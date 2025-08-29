@@ -1,5 +1,44 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+html {
+  scroll-behavior: smooth;
+}
+@keyframes morph-slow {
+  0% {
+    border-radius: 50% 50% 50% 50%;
+    transform: scale(1);
+    opacity: 0.65;
+  }
+  25% {
+    border-radius: 60% 40% 55% 45%;
+    transform: scale(1.05);
+    opacity: 0.75;
+  }
+  50% {
+    border-radius: 50% 50% 45% 55%;
+    transform: scale(1.1);
+    opacity: 0.85;
+  }
+  75% {
+    border-radius: 55% 45% 60% 40%;
+    transform: scale(1.05);
+    opacity: 0.75;
+  }
+  100% {
+    border-radius: 50% 50% 50% 50%;
+    transform: scale(1);
+    opacity: 0.65;
+  }
+}
+
+.animate-morph-slow {
+  animation: morph-slow 14s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 60s linear infinite;
+}
+
 *{
   font-family:     Verdana;
 }

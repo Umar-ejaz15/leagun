@@ -21,29 +21,35 @@ const Home = () => {
     <div className="">
       <StickyCTA />
 
-      <Hero />
-      {/* this will change into pdf section  */}
+      {/* Hero Section */}
+      <div id="home">
+        <Hero />
+      </div>
+
+      {/* Metrics Section */}
       <Matrices />
 
-      <About />
+      {/* About Section */}
+      <div id="about">
+        <About />
+      </div>
 
-      {/* <WhyUs /> */}
+      {/* Why Us Section */}
+      <div id="whyus">
+        <HowItWorks />
+      </div>
 
-      <HowItWorks />
+      {/* Case Studies Section */}
+      <div id="casestudies">
+        <CaseStudies />
+      </div>
 
-      {/* <Services /> */}
+      {/* Contact Section */}
+      <div id="contact">
+        <Form />
+      </div>
 
-      <CaseStudies />
-      <Form />
-
-      {/* <Reviews /> */}
-
-      {/* <Faq3 /> */}
-
-      {/* <Pricing /> */}
-
-      {/* <Final /> */}
-
+      {/* Newsletter Section */}
       <Newsletter />
     </div>
   );

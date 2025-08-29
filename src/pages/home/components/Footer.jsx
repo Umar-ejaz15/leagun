@@ -39,7 +39,7 @@ const Footer = () => {
           <div>
             <h4 className="text-gray-900 font-semibold mb-3">Quick Links</h4>
             <ul className="space-y-2 text-gray-600 text-sm">
-              {["home", "services", "about", "contact"].map((item, i) => (
+              {["home", "whyus", "about", "contact"].map((item, i) => (
                 <li key={i}>
                   <Link
                     to={`/${item}`}
@@ -75,18 +75,7 @@ const Footer = () => {
         </div>
       </footer>
 
-      {/* ✅ Scroll to Top Button */}
-      {showScroll && (
-        <motion.button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 50 }}
-          className="fixed bottom-6 right-6 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition"
-        >
-          <ArrowUp className="w-5 h-5" />
-        </motion.button>
-      )}
+
     </div>
   );
 };
