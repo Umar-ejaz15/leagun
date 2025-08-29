@@ -14,53 +14,37 @@ import Pricing from "./components/Pricing";
 import CaseStudies from "./components/CaseStudies";
 import StickyCTA from "./components/StickyCTA";
 import Final from "./components/Final";
+import Form from "../contact/components/Form";
 
 const Home = () => {
   return (
     <div className="">
-      {/* Floating CTA */}
       <StickyCTA />
 
-      {/* Hero Section */}
       <Hero />
-
-      {/* Client Logos */}
-      {/* <ClientLogos /> */}
-
-      {/* Key Metrics */}
+      {/* this will change into pdf section  */}
       <Matrices />
 
-      {/* About Section */}
       <About />
 
-      {/* Why Choose Us */}
-      <WhyUs />
+      {/* <WhyUs /> */}
 
-      {/* How It Works */}
       <HowItWorks />
 
-      {/* Services Section */}
-      <Services />
+      {/* <Services /> */}
 
-      {/* Case Studies */}
       <CaseStudies />
+      <Form />
 
-      {/* Client Reviews */}
-      <Reviews />
+      {/* <Reviews /> */}
 
-      {/* FAQ Section */}
-      <Faq3 />
+      {/* <Faq3 /> */}
 
-      {/* Pricing */}
-      <Pricing />
+      {/* <Pricing /> */}
 
-      {/* Final Bold CTA */}
-      <Final />
+      {/* <Final /> */}
 
-      {/* Newsletter */}
       <Newsletter />
-
-      {/* Footer */}
     </div>
   );
 };
