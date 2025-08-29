@@ -40,7 +40,8 @@ const Values = () => {
           </Highlighter>
         </h2>
         <p className="mt-4 text-gray-700 text-base md:text-lg max-w-2xl mx-auto">
-          Everything we do is guided by principles that drive results and trust. These values shape our work and define our commitment to you.
+          Everything we do is guided by principles that drive results and trust.
+          These values shape our work and define our commitment to you.
         </p>
       </div>
 
@@ -62,8 +63,12 @@ const Values = () => {
               </div>
 
               {/* Title & Description */}
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed">{item.desc}</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                {item.desc}
+              </p>
             </motion.div>
           );
         })}
