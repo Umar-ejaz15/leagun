@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col py-20 items-center text-center max-w-4xl mx-auto">
         {/* Pain Point */}
         <h1
-          className="font-extrabold tracking-tight leading-snug 
+          className="font-extrabold tracking-tight leading-none 
                        text-[clamp(2rem,4vw,2.5rem)]"
         >
           Are you{" "}
