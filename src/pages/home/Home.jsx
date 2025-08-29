@@ -61,7 +61,6 @@ const Home = () => {
       <Newsletter />
 
       {/* Footer */}
-      <Footer />
     </div>
   );
 };
