@@ -1,91 +1,70 @@
-import React, { useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
+"use client";
+
+import React from "react";
+import { Separator } from "@/components/ui/separator";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { Dock, DockIcon } from "@/components/magicui/dock";
+import { InteractiveHoverButton } from "./magicui/interactive-hover-button";
 import Buttonrgb from "./Buttonrgb";
+import { Link as ScrollLink } from "react-scroll";
+import { HomeIcon, InfoIcon, UserCheckIcon, PhoneIcon } from "lucide-react"; // icons for mobile
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const DATA = [
+  { href: "home", label: "Home", icon: <HomeIcon className="w-5 h-5" /> },
+  { href: "about", label: "About", icon: <InfoIcon className="w-5 h-5" /> },
+  { href: "whyus", label: "Why Us", icon: <UserCheckIcon className="w-5 h-5" /> },
+  { href: "contact", label: "Contact", icon: <PhoneIcon className="w-5 h-5" /> },
+];
 
-  const links = [
-    { name: "Home", to: "home" },
-    { name: "About", to: "about" },
-    { name: "Why Us", to: "whyus" },
-    { name: "Contact", to: "contact" },
-  ];
-
+export default function Navigation() {
   return (
-    <nav className="fixed w-full z-[100] bg-white backdrop-blur-md shadow-md transition-all">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+    <div className="fixed top-2 left-1/2 -translate-x-1/2 z-[100] w-full max-w-4xl px-4">
+      <TooltipProvider>
+        <Dock
+          direction="middle"
+          className="gap-4 px-4 py-2 bg-white/90 backdrop-blur-md rounded-xl shadow-lg  transition-all duration-300 flex justify-center items-center"
+        >
           {/* Logo */}
-          <div className="flex-shrink-0 text-2xl font-bold text-gray-800">
-            <img src="/logo.jpg" className="w-10 md:w-20" alt="Logo" />
-          </div>
+          <h1 className="flex-shrink-0">
+            <img src="/logo.jpg" alt="Logo" className="h-10 w-auto" />
+          </h1>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
-            {links.map((link) => (
+          <Separator orientation="vertical" className="h-6 hidden sm:block" />
+
+          {/* Navigation Buttons */}
+          <div className="flex items-center gap-3">
+            {DATA.map((item) => (
               <ScrollLink
-                key={link.name}
-                to={link.to}
+                key={item.href}
+                to={item.href}
                 smooth={true}
-                duration={600}
-                offset={-80} // adjust for navbar height
-                spy={true}
-                activeClass="text-purple-600"
-                className="cursor-pointer relative text-gray-700 font-medium px-2 py-1 rounded-md 
-                  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r 
-                  hover:from-purple-500 hover:via-purple-700 hover:to-purple-400
-                  after:block after:h-[2px] after:bg-purple-500 after:w-0 
-                  hover:after:w-full after:transition-all after:duration-300"
-              >
-                {link.name}
-              </ScrollLink>
-            ))}
-          </div>
-
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
-            <Buttonrgb txt="Schedule a Call →" />
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition"
-            >
-              {isOpen ? "❌" : "☰"}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md shadow-lg transition-all">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {links.map((link) => (
-              <ScrollLink
-                key={link.name}
-                to={link.to}
-                smooth={true}
-                duration={600}
                 offset={-80}
-                spy={true}
-                onClick={() => setIsOpen(false)}
-                className="block cursor-pointer text-gray-700 hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:via-purple-700 hover:to-purple-400 px-3 py-2 rounded-md transition-all font-medium"
+                duration={800}
+                className="group cursor-pointer text-gray-800 font-bold relative hover:text-purple-600 transition-colors duration-300 flex items-center gap-1"
               >
-                {link.name}
+                {/* Mobile: icon only, Desktop: icon + label */}
+                <span className="sm:hidden">{item.icon}</span>
+                <span className="hidden sm:inline text-xs md:text-sm uppercase">
+                  {item.label}
+                </span>
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
               </ScrollLink>
             ))}
           </div>
-          <div className="py-5 flex justify-center">
-            <Buttonrgb txt="Schedule a Call →" />
-          </div>
-        </div>
-      )}
-    </nav>
-  );
-};
 
-export default Navbar;
+          <Separator orientation="vertical" className="h-6 hidden sm:block" />
+
+          {/* CTA Buttons */}
+          <div className="flex items-center gap-1">
+            <div className="hidden sm:block">
+              <Buttonrgb txt="Email Us" />
+            </div>
+            <InteractiveHoverButton className="bg-purple-600 text-white hover:bg-purple-700 transition-all duration-300 rounded-md text-xs px-6 py-2">
+              Book A Call
+            </InteractiveHoverButton>
+          </div>
+        </Dock>
+      </TooltipProvider>
+    </div>
+  );
+}

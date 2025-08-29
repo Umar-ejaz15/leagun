@@ -102,7 +102,6 @@ body::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #d946ef, #8b5cf6);
 }
 
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -153,7 +152,18 @@ body::-webkit-scrollbar-thumb:hover {
     background-position:  0% 0%;
     }
   }
-}
+  --animate-gradient: gradient 8s linear infinite
+;
+  @keyframes gradient {
+  to {
+    background-position: var(--bg-size, 300%) 0;
+    }
+  }
+  @keyframes gradient {
+  to {
+    background-position: var(--bg-size, 300%) 0;
+    }
+  }}
 
 :root {
   --radius: 0.625rem;
