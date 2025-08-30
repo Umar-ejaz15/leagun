@@ -12,17 +12,25 @@ import { HomeIcon, InfoIcon, UserCheckIcon, PhoneIcon } from "lucide-react"; // 
 const DATA = [
   { href: "home", label: "Home", icon: <HomeIcon className="w-5 h-5" /> },
   { href: "about", label: "About", icon: <InfoIcon className="w-5 h-5" /> },
-  { href: "whyus", label: "Why Us", icon: <UserCheckIcon className="w-5 h-5" /> },
-  { href: "contact", label: "Contact", icon: <PhoneIcon className="w-5 h-5" /> },
+  {
+    href: "whyus",
+    label: "Why Us",
+    icon: <UserCheckIcon className="w-5 h-5" />,
+  },
+  {
+    href: "contact",
+    label: "Contact",
+    icon: <PhoneIcon className="w-5 h-5" />,
+  },
 ];
 
 export default function Navigation() {
   return (
-    <div className="fixed top-2 left-1/2 -translate-x-1/2 z-[100] w-full max-w-4xl px-4">
+    <div className="fixed top-0 left-1/2 -translate-x-1/2 z-[100]  px-4">
       <TooltipProvider>
         <Dock
           direction="middle"
-          className="gap-4 px-4 py-2 bg-white/90 backdrop-blur-md rounded-xl shadow-lg  transition-all duration-300 flex justify-center items-center"
+          className="gap-5 px-4 py-2 bg-white/90 w-[100vw] md:w-[800px] backdrop-blur-md rounded-xl shadow-lg  transition-all duration-300 flex justify-between items-center"
         >
           {/* Logo */}
           <h1 className="flex-shrink-0">
@@ -32,7 +40,7 @@ export default function Navigation() {
           <Separator orientation="vertical" className="h-6 hidden sm:block" />
 
           {/* Navigation Buttons */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-10 md:gap-3">
             {DATA.map((item) => (
               <ScrollLink
                 key={item.href}
@@ -55,11 +63,11 @@ export default function Navigation() {
           <Separator orientation="vertical" className="h-6 hidden sm:block" />
 
           {/* CTA Buttons */}
-          <div className="flex items-center gap-1">
+          <div className=" hidden sm:flex items-center gap-1">
             <div className="hidden sm:block">
               <Buttonrgb txt="Email Us" />
             </div>
-            <InteractiveHoverButton className="bg-purple-600 text-white hover:bg-purple-700 transition-all duration-300 rounded-md text-xs px-6 py-2">
+            <InteractiveHoverButton className="bg-purple-600 hidden sm:block text-white hover:bg-purple-700 transition-all duration-300 rounded-md text-xs px-6 py-2">
               Book A Call
             </InteractiveHoverButton>
           </div>

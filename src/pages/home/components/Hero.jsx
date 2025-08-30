@@ -3,21 +3,19 @@ import BottomShape from "@/components/BottomShape";
 import TopShape from "@/components/TopShape";
 import { Highlighter } from "@/components/magicui/highlighter";
 import Buttonrgb from "@/components/Buttonrgb";
+import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
+import { AnimatedGradientTextDemo } from "@/components/AnimatedGradientTextDemo";
 
 const Hero = () => {
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6 md:px-12 lg:px-30 bg-white">
     
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto mt-30">
+      <div className="relative z-10 flex flex-col items-center text-center max-w-2xl mx-auto mt-30">
         {/* Pain Point */}
-        <h1 className="font-extrabold tracking-tight leading-none text-[clamp(1.8rem,4vw,2.5rem)]">
-          Tired of wasting{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
-            time & money
-          </span>{" "}
-          on low-quality leads? 😩
-        </h1>
+        <AnimatedGradientTextDemo className="font-medium tracking-tight leading-none text-[clamp(1.2rem,4vw,1rem)]">
+          
+        </AnimatedGradientTextDemo>
 
         {/* Sub-Tagline / Solution */}
         <p className="mt-4 text-lg sm:text-xl text-gray-700 max-w-3xl">
