@@ -2,8 +2,30 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import emailjs from "emailjs-com";
 
 const Form = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_yh908s7",     // ✅ Your Service ID
+        "template_ut54n2u",   // ✅ Your Template ID
+        e.target,
+        "woM_pL2_-Rgu6fU7E" // ✅ Your Public Key
+      )
+      .then(
+        () => {
+          alert("✅ Application sent successfully!");
+          e.target.reset();
+        },
+        (error) => {
+          alert("❌ Failed to send: " + error.text);
+        }
+      );
+  };
+
   return (
     <section className="relative w-full min-h-screen bg-white flex items-center justify-center px-6 sm:px-12 lg:px-32 py-24">
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -23,31 +45,11 @@ const Form = () => {
             Fill in the form and we’ll connect with you to craft a growth
             strategy that brings in leads, sales, and ROI 🚀
           </p>
-
-          <div className="space-y-4 text-gray-700">
-            <p>
-              📍 <span className="font-semibold">Our Office:</span> 123 Growth
-              Street, Innovation City
-            </p>
-            <p>
-              📧 <span className="font-semibold">Email:</span>{" "}
-              <a
-                href="mailto:workwithzain@yahoo.com"
-                className="text-purple-600 hover:underline"
-              >
-                workwithzain@yahoo.com
-              </a>
-            </p>
-            <p>
-              📞 <span className="font-semibold">Phone:</span> +1 (234) 567-890
-            </p>
-          </div>
         </motion.div>
 
         {/* -------- Right Form -------- */}
         <motion.form
-          action="https://formspree.io/f/YOUR_FORM_ID" // replace with real Formspree ID
-          method="POST"
+          onSubmit={sendEmail}
           className="bg-gray-50 p-8 rounded-2xl shadow-lg flex flex-col space-y-6"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -56,26 +58,26 @@ const Form = () => {
         >
           <input
             type="text"
-            name="Full Name"
+            name="full_name"
             placeholder="Full Name"
             required
             className="w-full px-5 py-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:outline-none"
           />
           <input
             type="text"
-            name="Business Name"
+            name="business_name"
             placeholder="Business Name"
             className="w-full px-5 py-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:outline-none"
           />
           <input
             type="text"
-            name="Niche"
+            name="niche"
             placeholder="Your Niche / Industry"
             className="w-full px-5 py-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:outline-none"
           />
 
           <select
-            name="Expected Leads"
+            name="expected_leads"
             className="w-full px-5 py-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:outline-none"
           >
             <option value="">How many leads do you expect monthly?</option>
@@ -87,14 +89,14 @@ const Form = () => {
 
           <input
             type="email"
-            name="Email"
+            name="email"
             placeholder="Email Address"
             required
             className="w-full px-5 py-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:outline-none"
           />
           <input
             type="tel"
-            name="Phone"
+            name="phone"
             placeholder="Phone Number"
             className="w-full px-5 py-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:outline-none"
           />
@@ -107,10 +109,6 @@ const Form = () => {
           </Button>
         </motion.form>
       </div>
-
-      {/* -------- Background Glow -------- */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200 blur-3xl rounded-full opacity-30 -z-10"></div>
-      <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-300 blur-3xl rounded-full opacity-20 -z-10"></div>
     </section>
   );
 };

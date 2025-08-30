@@ -7,7 +7,7 @@ import { AnimatedGradientTextDemo } from "@/components/AnimatedGradientTextDemo"
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-auto md:min-h-screen flex flex-col mt-30 px-4 sm:px-6  md:px-12 lg:px-24 bg-gradient-to-b from-white t-10 to-purple-50 overflow-hidden">
+    <section className="relative w-full h-auto md:min-h-screen flex flex-col mt-30 px-4 sm:px-6  md:px-12 lg:px-24 bg-gradient-to-b from-white md:mt-5 to-purple-50 overflow-hidden">
     
 
       {/* Main Content */}
