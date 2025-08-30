@@ -7,42 +7,49 @@ import { AnimatedGradientTextDemo } from "@/components/AnimatedGradientTextDemo"
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6 md:px-12 lg:px-24 bg-white">
+    <section className="relative w-full h-auto md:min-h-screen flex flex-col mt-30 px-4 sm:px-6  md:px-12 lg:px-24 bg-gradient-to-b from-white t-10 to-purple-50 overflow-hidden">
+    
+
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto mt-20 md:mt-28">
+      <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto  md:mt-30">
+        
         {/* Pain Point */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <AnimatedGradientTextDemo className="font-bold tracking-tight leading-tight text-[clamp(1.5rem,4vw,2.5rem)]" />
+          <AnimatedGradientTextDemo className="font-extrabold tracking-tight leading-tight text-sm md:text-[clamp(1.8rem,4vw,3rem)]  drop-shadow-sm" />
         </motion.div>
 
-        {/* Sub-Tagline / Solution */}
+        {/* Sub-Tagline */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-4 text-base sm:text-lg md:text-xl text-gray-700 max-w-2xl"
+          className="mt-4 text-3xl w-full tracking-tighter sm:text-lg md:text-5xl text-gray-700/90 md:max-w-6xl"
         >
           We help local businesses book{" "}
-          <span className="font-semibold text-purple-600">40–50 appointments</span>{" "}
-          every month — no catch 🚀
+          <span className="font-semibold text-purple-700">
+            40–50 appointments
+          </span>{" "}
+          every month — no catch 
         </motion.p>
 
-        {/* Video */}
+        {/* Video Showcase */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.7 }}
-          className="mt-8 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl shadow-purple-500/50 
-                     ring-4 ring-purple-500/20 hover:ring-purple-500/40 transition-all duration-500"
+          className="mt-10 w-full max-w-3xl rounded-2xl overflow-hidden 
+                     shadow-xl shadow-purple-500/40 border border-purple-200/30 
+                     backdrop-blur-sm hover:scale-[1.02] transition-transform duration-500"
         >
           <div className="aspect-video">
             <video
               autoPlay
               loop
+              muted
               controls
               playsInline
               className="w-full h-full object-cover"
@@ -64,7 +71,7 @@ const Hero = () => {
             txt="🚀 Schedule a Call →"
             className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-500
                        hover:from-purple-700 hover:via-purple-800 hover:to-purple-600
-                       text-white shadow-purple-400 shadow-lg hover:shadow-2xl
+                       text-white shadow-lg shadow-purple-400/40 hover:shadow-purple-500/60
                        transition-all duration-300 px-8 py-4 text-lg font-semibold
                        rounded-full animate-glow"
           />
