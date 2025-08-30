@@ -2,23 +2,28 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import emailjs from "emailjs-com";
 
 const Form = () => {
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    const form = e.target;
 
-    fetch("https://formsubmit.co/malikzainnoor2000@gmail.com", {
-      method: "POST",
-      body: new FormData(form),
-    })
-      .then(() => {
-        alert("✅ Your application was submitted successfully!");
-        form.reset();
-      })
-      .catch(() => {
-        alert("❌ Something went wrong, please try again.");
-      });
+    emailjs
+      .sendForm(
+        "service_yh908s7",     // ✅ Your Service ID
+        "template_ut54n2u",   // ✅ Your Template ID
+        e.target,
+        "woM_pL2_-Rgu6fU7E" // ✅ Your Public Key
+      )
+      .then(
+        () => {
+          alert("✅ Application sent successfully!");
+          e.target.reset();
+        },
+        (error) => {
+          alert("❌ Failed to send: " + error.text);
+        }
+      );
   };
 
   return (
@@ -44,17 +49,13 @@ const Form = () => {
 
         {/* -------- Right Form -------- */}
         <motion.form
-          onSubmit={handleSubmit}
+          onSubmit={sendEmail}
           className="bg-gray-50 p-8 rounded-2xl shadow-lg flex flex-col space-y-6"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          {/* Hidden fields for FormSubmit */}
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_subject" value="New Application Received!" />
-
           <input
             type="text"
             name="full_name"
