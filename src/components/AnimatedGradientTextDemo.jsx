@@ -19,7 +19,7 @@ export function AnimatedGradientTextDemo() {
         }}
       />
       <AnimatedGradientText className="text-lg font-extrabold">
-        Tired of wasting time & money on low-quality leads? 😩
+        Struggling to increase sales and grow?
       </AnimatedGradientText>
       <BadgeQuestionMarkIcon
         className="ml-1 size-4 stroke-neutral-500 transition-transform

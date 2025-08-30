@@ -15,6 +15,7 @@ import CaseStudies from "./components/CaseStudies";
 import StickyCTA from "./components/StickyCTA";
 import Final from "./components/Final";
 import Form from "../contact/components/Form";
+import MarketingGuide from "./components/MarketingGuide";
 
 const Home = () => {
   return (
@@ -27,7 +28,7 @@ const Home = () => {
       </div>
 
       {/* Metrics Section */}
-      <Matrices />
+      <MarketingGuide/>
 
       {/* About Section */}
       <div id="about">
