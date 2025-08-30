@@ -18,14 +18,14 @@ const Hero = () => {
         </AnimatedGradientTextDemo>
 
         {/* Sub-Tagline / Solution */}
-        <p className="mt-4 text-lg sm:text-xl text-gray-700 max-w-3xl">
+        <p className="mt-4 text-lg sm:text-xl text-gray-700 max-w-2xl">
           Our{" "}
-          <Highlighter action="highlight" color="purple">
-            <span className="text-white">AI Hybrid System</span>
+          <Highlighter action="underline" color="purple">
+            <span className="text-black">AI Hybrid System</span>
           </Highlighter>{" "}
           delivers{" "}
-          <Highlighter action="highlight" color="purple">
-            <span className="text-white">75-100 qualified leads 🚀</span>
+          <Highlighter action="underline" color="purple">
+            <span className="text-black">75-100 qualified leads 🚀</span>
           </Highlighter>{" "}
           in just{" "}
           <span className="font-semibold text-gray-900">90 days ⚡</span>, so
@@ -39,8 +39,8 @@ const Hero = () => {
           <div className="aspect-video">
             <video
               autoPlay
-              muted
               loop
+              controls
               playsInline
               className="w-full h-full object-cover"
             >
