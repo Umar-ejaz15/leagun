@@ -8,7 +8,7 @@ const Form = () => {
     e.preventDefault();
     const form = e.target;
 
-    fetch("https://formsubmit.co/workwithzain@yahoo.com", {
+    fetch("https://formsubmit.co/malikzainnoor2000@gmail.com", {
       method: "POST",
       body: new FormData(form),
     })
