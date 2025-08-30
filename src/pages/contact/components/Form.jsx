@@ -7,7 +7,6 @@ const Form = () => {
   return (
     <section className="relative w-full min-h-screen bg-white flex items-center justify-center px-6 sm:px-12 lg:px-32 py-24">
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16">
-        
         {/* -------- Left Content -------- */}
         <motion.div
           className="flex flex-col space-y-6"
@@ -33,10 +32,10 @@ const Form = () => {
             <p>
               📧 <span className="font-semibold">Email:</span>{" "}
               <a
-                href="mailto:umar.senpaiiii@gmail.com"
+                href="mailto:workwithzain@yahoo.com"
                 className="text-purple-600 hover:underline"
               >
-                umar.senpaiiii@gmail.com
+                workwithzain@yahoo.com
               </a>
             </p>
             <p>
