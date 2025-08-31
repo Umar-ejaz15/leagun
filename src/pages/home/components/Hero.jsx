@@ -4,22 +4,20 @@ import React from "react";
 import { motion } from "framer-motion";
 import Buttonrgb from "@/components/Buttonrgb";
 import { AnimatedGradientTextDemo } from "@/components/AnimatedGradientTextDemo";
+import { Highlighter } from "@/components/magicui/highlighter";
 
 const Hero = () => {
   return (
     <section className="relative w-full h-auto md:min-h-screen flex flex-col mt-30 px-4 sm:px-6  md:px-12 lg:px-24 bg-gradient-to-b from-white md:mt-5 to-purple-50 overflow-hidden">
-    
-
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto  md:mt-30">
-        
+      <div className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto  md:mt-30">
         {/* Pain Point */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <AnimatedGradientTextDemo className="font-extrabold tracking-tight leading-tight text-sm md:text-[clamp(1.8rem,4vw,3rem)]  drop-shadow-sm" />
+          <AnimatedGradientTextDemo className="font-extrabold tracking-tighter leading-none text-sm md:text-[clamp(1.8rem,4vw,3rem)]  drop-shadow-sm" />
         </motion.div>
 
         {/* Sub-Tagline */}
@@ -27,13 +25,15 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-4 text-3xl w-full tracking-tighter sm:text-lg md:text-5xl text-gray-700/90 md:max-w-6xl"
+          className="mt-4 text-3xl w-full tracking-tighter sm:text-lg md:text-5xl text-gray-700/90 md:max-w-5xl"
         >
           We help local businesses book{" "}
-          <span className="font-semibold text-purple-700">
-            40–50 appointments
-          </span>{" "}
-          every month — no catch 
+          <Highlighter action="underline" color="purple">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
+              40–50
+            </span>
+          </Highlighter>
+          appointments every month — no catch
         </motion.p>
 
         {/* Video Showcase */}
@@ -41,9 +41,9 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.7 }}
-          className="mt-10 w-full max-w-3xl rounded-2xl overflow-hidden 
+          className="mt-6 w-full max-w-3xl rounded-2xl overflow-hidden 
                      shadow-xl shadow-purple-500/40 border border-purple-200/30 
-                     backdrop-blur-sm hover:scale-[1.02] transition-transform duration-500"
+                     backdrop-blur-sm  transition-transform duration-500"
         >
           <div className="aspect-video">
             <video
@@ -63,11 +63,16 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.6, type: "spring", stiffness: 120 }}
-          className="mt-10"
+          transition={{
+            delay: 0.8,
+            duration: 0.6,
+            type: "spring",
+            stiffness: 120,
+          }}
+          className="mt-10 mb-10"
         >
           <Buttonrgb
-            txt="🚀 Schedule a Call →"
+            txt="Schedule a Call →"
             className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-500
                        hover:from-purple-700 hover:via-purple-800 hover:to-purple-600
                        text-white shadow-lg shadow-purple-400/40 hover:shadow-purple-500/60

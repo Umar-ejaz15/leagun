@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="relative px-6 py-20 lg:px-0 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+    <section className="relative  py-5 lg:px-0 overflow-hidden bg-gradient-to-b from-white to-gray-50">
   
 
       {/* Heading */}
@@ -18,7 +18,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-[clamp(1.5rem,4vw,3.2rem)] font-extrabold text-center bg-clip-text text-transparent 
-                   bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-sm mb-16 max-w-4xl mx-auto leading-snug"
+                   bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-sm mb-5 max-w-4xl mx-auto leading-snug"
       >
         About{" "}
         <Highlighter action="underline" color="purple">
@@ -29,7 +29,7 @@ const About = () => {
       </motion.h1>
 
       {/* Company Section */}
-      <div className="relative z-10 max-w-5xl mx-auto mb-24 text-center">
+      <div className="relative px-6 z-10 max-w-5xl mx-auto mb-5  text-center">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ const About = () => {
       </div>
 
       {/* Leadership Section */}
-      <div className="relative bg-gray-100 py-5 z-10 mx-auto">
+      <div className="relative px-6 bg-purple-50 py-5 z-10 mx-auto">
         <div className="flex justify-center mb-10">
           <Highlighter action="underline" color="purple">
             <motion.h2
@@ -79,19 +79,19 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="order-2  lg:order-1"
           >
-            <h3 className="text-3xl  font-bold text-gray-900 mb-3">Zain Noor</h3>
-            <p className="text-purple-700 font-semibold text-lg mb-6">
+            <h3 className="text-4xl  font-bold text-gray-900 mb-3">Zain Noor</h3>
+            <p className="text-purple-700 font-semibold text-xl mb-3">
               Founder & Sales Professional
             </p>
 
-            <p className="text-gray-700 sm:text-lg md:text-xl leading-relaxed">
+            <p className="text-gray-700 sm:text-lg md:text-xl ">
               With over 5 years of sales experience across the USA, UK, and UAE,
               Zain has worked with top global companies — including leading the
               Mid-Market segment for the multi-billion-dollar{" "}
               <span className="font-bold">Motive Technologies</span>.
             </p>
 
-            <p className="mt-6 text-gray-700 sm:text-lg md:text-xl leading-relaxed">
+            <p className="mt-6 text-gray-700 sm:text-lg md:text-xl">
               Known for building predictable sales systems, Zain has transformed
               struggling pipelines into engines of growth by refining strategies
               that actually work in the real world.
@@ -99,7 +99,7 @@ const About = () => {
 
             <a
               href="mailto:workwithzain@yahoo.com"
-              className="mt-8 inline-block text-purple-600 font-semibold hover:text-purple-800 transition text-lg"
+              className="mt-8 inline-block text-purple-600 font-semibold hover:text-purple-800 transition text-lg underline"
             >
               📩 workwithzain@yahoo.com
             </a>
@@ -107,7 +107,7 @@ const About = () => {
 
           {/* Right: Image */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className="order-1  lg:order-2 flex justify-center lg:justify-end mb-10 lg:mb-0"
@@ -115,7 +115,7 @@ const About = () => {
             <img
               src="/pic.jpg"
               alt="Zain Noor"
-              className="rounded-md w-full md:w-2/4 object-cover border-4 border-purple-200 shadow-lg hover:scale-105 transition-transform duration-300"
+              className="rounded-md w-full md:w-2/4 object-cover border-4 border-purple-200 shadow-lg  transition-transform duration-300"
             />
           </motion.div>
         </div>
@@ -126,8 +126,8 @@ const About = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="mt-24 max-w-5xl mx-auto text-center bg-gradient-to-r from-purple-50 to-white 
-                   backdrop-blur-xl rounded-2xl shadow-lg px-10 py-16 border border-purple-100"
+        className="mt-10 max-w-5xl mx-auto text-center bg-gradient-to-r from-purple-50 to-white 
+                   backdrop-blur-xl rounded-2xl shadow-lg px-10 py-10 border border-purple-100"
       >
         <h2 className="text-[clamp(1.8rem,4vw,2.5rem)] bg-clip-text text-transparent bg-gradient-to-r 
                        from-purple-500 via-purple-600 to-purple-400 font-extrabold mb-4">

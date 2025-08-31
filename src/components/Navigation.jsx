@@ -27,8 +27,8 @@ export default function Navigation() {
       <TooltipProvider>
         <Dock
           direction="middle"
-          className="gap-5 px-4 py-2 bg-white/90 w-full md:w-[850px] 
-          backdrop-blur-md rounded-2xl shadow-lg transition-all duration-300 
+          className="gap-5 px-4 py-2 bg-white w-full md:w-[850px] 
+          backdrop-blur-md rounded-xl shadow-lg transition-all duration-300 
           flex justify-between items-center border border-gray-200/40"
         >
           {/* Logo */}

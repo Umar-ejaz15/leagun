@@ -18,8 +18,8 @@ export function AnimatedGradientTextDemo() {
           WebkitClipPath: "padding-box",
         }}
       />
-      <AnimatedGradientText className="text-sm md:text-lg font-extrabold">
-        <h1>Struggling to increase sales and grow?</h1>
+      <AnimatedGradientText className="text-sm md:text-xl font-extrabold">
+        <h1>Struggling to increase sales and grow</h1>
       </AnimatedGradientText>
       <BadgeQuestionMarkIcon
         className="ml-1 size-4 stroke-neutral-500 transition-transform
