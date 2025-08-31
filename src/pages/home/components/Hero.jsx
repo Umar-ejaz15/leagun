@@ -22,9 +22,6 @@ const Hero = () => {
 
         {/* Sub-Tagline */}
         <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
           className="mt-4 text-3xl w-full tracking-tighter sm:text-lg md:text-5xl text-gray-700/90 md:max-w-5xl"
         >
           We help local businesses book{" "}
@@ -69,7 +66,7 @@ const Hero = () => {
             type: "spring",
             stiffness: 120,
           }}
-          className="mt-10 mb-10"
+          className="mt-10 mb-5"
         >
           <Buttonrgb
             txt="Schedule a Call →"
