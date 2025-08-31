@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const MarketingGuide = () => {
   return (
-    <section className="py-10 px-6 md:px-12 bg-gray-50">
+    <section className="py-10 px-6 md:px-12 bg-purple-50">
       <div className="max-w-4xl mx-auto text-center">
         {/* Heading */}
         <motion.h2

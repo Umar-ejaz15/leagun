@@ -49,7 +49,7 @@ const Form = () => {
         {/* -------- Right Form -------- */}
         <motion.form
           onSubmit={sendEmail}
-          className="bg-gray-50 p-8 rounded-2xl shadow-lg flex flex-col space-y-6"
+          className="bg-purple-50 p-8 rounded-2xl shadow-lg flex flex-col space-y-6"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}

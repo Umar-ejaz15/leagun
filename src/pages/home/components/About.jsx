@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="relative  py-5 lg:px-0 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+    <section className="relative  py-5 lg:px-0 overflow-hidden bg-gradient-to-b from-white to-purple-50">
   
 
       {/* Heading */}

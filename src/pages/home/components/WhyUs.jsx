@@ -46,7 +46,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <section className="relative w-full py-20 px-6 md:px-12 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+    <section className="relative w-full py-20 px-6 md:px-12 overflow-hidden bg-gradient-to-b from-white to-purple-50">
    
 
       {/* Heading */}

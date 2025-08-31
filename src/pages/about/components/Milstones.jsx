@@ -33,7 +33,7 @@ const Milestones = () => {
   ];
 
   return (
-    <section className="relative py-24 px-6 md:px-12 bg-gray-50 overflow-hidden">
+    <section className="relative py-24 px-6 md:px-12 bg-purple-50 overflow-hidden">
       {/* Background Shapes */}
       <div className="absolute inset-0 -z-10 opacity-10 blur-xl">
         <TopShape />
