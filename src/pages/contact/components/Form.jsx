@@ -10,8 +10,8 @@ const Form = () => {
 
     emailjs
       .sendForm(
-        "service_yh908s7",     // ✅ Your Service ID
-        "template_ut54n2u",   // ✅ Your Template ID
+        "service_yh908s7", // ✅ Your Service ID
+        "template_ut54n2u", // ✅ Your Template ID
         e.target,
         "woM_pL2_-Rgu6fU7E" // ✅ Your Public Key
       )
@@ -35,7 +35,6 @@ const Form = () => {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          viewport={{ once: true }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
             Sign Up to Build Your{" "}
@@ -54,7 +53,6 @@ const Form = () => {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          viewport={{ once: true }}
         >
           <input
             type="text"

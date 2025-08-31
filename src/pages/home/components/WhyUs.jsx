@@ -47,11 +47,7 @@ const WhyUs = () => {
 
   return (
     <section className="relative w-full py-20 px-6 md:px-12 overflow-hidden bg-gradient-to-b from-white to-gray-50">
-      {/* Background Shapes */}
-      <div className="absolute blur-3xl inset-0 -z-10 opacity-15">
-        <TopShape />
-        <BottomShape />
-      </div>
+   
 
       {/* Heading */}
       <div className="max-w-7xl mx-auto text-center mb-16">

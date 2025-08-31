@@ -49,7 +49,6 @@ const Hero = () => {
             <video
               autoPlay
               loop
-              muted
               controls
               playsInline
               className="w-full h-full object-cover"

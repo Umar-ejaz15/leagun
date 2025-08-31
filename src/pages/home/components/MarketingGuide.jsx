@@ -14,7 +14,7 @@ const MarketingGuide = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-[clamp(2rem,5vw,3.2rem)] font-extrabold bg-clip-text text-transparent 
+          className="text-[clamp(1.6rem,5vw,3rem)] font-extrabold bg-clip-text text-transparent 
                      bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-lg"
         >
           Get Your{" "}

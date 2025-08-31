@@ -10,23 +10,14 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <section className="relative px-6 py-20 lg:px-0 overflow-hidden bg-gradient-to-b from-white to-gray-50">
-      {/* Background Shapes */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.1 }}
-        transition={{ duration: 1 }}
-        className="absolute blur-2xl inset-0 -z-10"
-      >
-        <TopShape />
-        <BottomShape />
-      </motion.div>
+  
 
       {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-center bg-clip-text text-transparent 
+        className="text-[clamp(1.5rem,4vw,3.2rem)] font-extrabold text-center bg-clip-text text-transparent 
                    bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-sm mb-16 max-w-4xl mx-auto leading-snug"
       >
         About{" "}
@@ -65,7 +56,7 @@ const About = () => {
       </div>
 
       {/* Leadership Section */}
-      <div className="relative bg-gray-50 z-10 mx-auto">
+      <div className="relative bg-gray-100 py-5 z-10 mx-auto">
         <div className="flex justify-center mb-10">
           <Highlighter action="underline" color="purple">
             <motion.h2
@@ -80,15 +71,15 @@ const About = () => {
           </Highlighter>
         </div>
 
-        <div className="grid lg:grid-cols-2 max-w-6xl justify-center mx-auto lg:gap-10 items-center">
+        <div className="grid lg:grid-cols-2  max-w-6xl justify-center mx-auto  items-center">
           {/* Left: Text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="order-2 lg:order-1"
+            className="order-2  lg:order-1"
           >
-            <h3 className="text-3xl font-bold text-gray-900 mb-3">Zain Noor</h3>
+            <h3 className="text-3xl  font-bold text-gray-900 mb-3">Zain Noor</h3>
             <p className="text-purple-700 font-semibold text-lg mb-6">
               Founder & Sales Professional
             </p>
@@ -119,12 +110,12 @@ const About = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="order-1 lg:order-2 flex justify-center lg:justify-end mb-10 lg:mb-0"
+            className="order-1  lg:order-2 flex justify-center lg:justify-end mb-10 lg:mb-0"
           >
             <img
               src="/pic.jpg"
               alt="Zain Noor"
-              className="rounded-md w-2/4 object-cover border-4 border-purple-200 shadow-lg hover:scale-105 transition-transform duration-300"
+              className="rounded-md w-full md:w-2/4 object-cover border-4 border-purple-200 shadow-lg hover:scale-105 transition-transform duration-300"
             />
           </motion.div>
         </div>
