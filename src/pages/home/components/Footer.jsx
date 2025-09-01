@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Linkedin, Twitter, Github, Mail, ArrowUp } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
-import Buttonrgb from "@/components/Buttonrgb";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -30,7 +29,7 @@ const Footer = () => {
               Scaling businesses with smart automation and AI-driven solutions.
             </p>
             <p className="text-gray-500 text-xs">
-              &copy; {new Date().getFullYear()} Your Company. All rights
+              &copy; {new Date().getFullYear()} Leagun Technologies. All rights
               reserved.
             </p>
           </div>
@@ -52,30 +51,35 @@ const Footer = () => {
             </ul>
           </div>
 
-       
-
           {/* ✅ Social */}
           <div>
             <h4 className="text-gray-900 font-semibold mb-3">
               Connect with us
             </h4>
             <div className="flex gap-4 text-gray-600">
-              {[Linkedin, Twitter, Github, Mail].map((Icon, i) => (
-                <motion.a
-                  key={i}
-                  href="#"
-                  whileHover={{ scale: 1.2, color: "#9333ea" }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Icon className="w-5 h-5" />
-                </motion.a>
-              ))}
+              {/* LinkedIn */}
+              <motion.a
+                href="https://www.linkedin.com/company/leagun-technologies/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2, color: "#9333ea" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <Linkedin className="w-5 h-5" />
+              </motion.a>
+
+              {/* Email */}
+              <motion.a
+                href="mailto:contact@leagun.com"
+                whileHover={{ scale: 1.2, color: "#9333ea" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <Mail className="w-5 h-5" />
+              </motion.a>
             </div>
           </div>
         </div>
       </footer>
-
-
     </div>
   );
 };
