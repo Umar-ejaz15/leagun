@@ -10,13 +10,8 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <section className="relative  py-5 lg:px-0 overflow-hidden bg-gradient-to-b from-white to-purple-50">
-  
-
       {/* Heading */}
       <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
         className="text-[clamp(1.5rem,4vw,3.2rem)] font-extrabold text-center bg-clip-text text-transparent 
                    bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-sm mb-5 max-w-4xl mx-auto leading-snug"
       >
@@ -36,9 +31,9 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="sm:text-xl md:text-2xl text-gray-900 leading-relaxed"
         >
-          <span className="font-bold">Leagun Technologies</span>, formerly
-          Soft Stone Technologies, has been pushing boundaries for 3 years.
-          We’ve tested a lot, failed a lot, and figured out what actually works.
+          <span className="font-bold">Leagun Technologies</span>, formerly Soft
+          Stone Technologies, has been pushing boundaries for 3 years. We’ve
+          tested a lot, failed a lot, and figured out what actually works.
           That’s how our <span className="font-bold">Sales Growth Engine</span>{" "}
           was born — not theory, but real strategies tested in the field.
         </motion.p>
@@ -79,7 +74,9 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="order-2  lg:order-1"
           >
-            <h3 className="text-4xl  font-bold text-gray-900 mb-3">Zain Noor</h3>
+            <h3 className="text-4xl  font-bold text-gray-900 mb-3">
+              Zain Noor
+            </h3>
             <p className="text-purple-700 font-semibold text-xl mb-3">
               Founder & Sales Professional
             </p>
@@ -120,33 +117,6 @@ const About = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* CTA */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="mt-10 max-w-5xl mx-auto text-center bg-gradient-to-r from-purple-50 to-white 
-                   backdrop-blur-xl rounded-2xl shadow-lg px-10 py-10 border border-purple-100"
-      >
-        <h2 className="text-[clamp(1.8rem,4vw,2.5rem)] bg-clip-text text-transparent bg-gradient-to-r 
-                       from-purple-500 via-purple-600 to-purple-400 font-extrabold mb-4">
-          Ready to Scale with Us?
-        </h2>
-        <p className="text-gray-700 sm:text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed">
-          Let’s build a predictable system for your sales growth. Book a free
-          consultation with Zain and discover how{" "}
-          <span className="font-bold">Leagun Technologies</span> can help your
-          business thrive.
-        </p>
-        <Buttonrgb
-          txt="Book My Free Consultation →"
-          className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-500 
-                     hover:from-purple-700 hover:via-purple-800 hover:to-purple-600 
-                     text-white shadow-md hover:shadow-xl hover:shadow-purple-400/40
-                     transition-all duration-300 px-10 py-5 rounded-full text-lg font-semibold"
-        />
-      </motion.div>
     </section>
   );
 };

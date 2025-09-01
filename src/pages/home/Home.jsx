@@ -37,55 +37,54 @@ const Home = () => {
       {/* Open Graph */}
       <Meta property="og:type" content="website" />
       <Meta property="og:url" content="https://www.leagun.com/" />
-      <Meta property="og:title" content="Leagun | Lead Generation Marketing Company" />
+      <Meta
+        property="og:title"
+        content="Leagun | Lead Generation Marketing Company"
+      />
       <Meta
         property="og:description"
         content="Leagun helps businesses grow with expert lead generation strategies and marketing solutions tailored to your goals."
       />
       <Meta property="og:image" content="/logo.jpg" />
 
-    
-
       {/* Favicon (optional extra) */}
       <Link rel="icon" href="/logo.jpg" />
 
       {/* Sticky CTA */}
       <StickyCTA />
-<div className="overflow-hidden">
+      <div className="overflow-hidden">
+        {/* Hero Section */}
+        <div id="home">
+          <Hero />
+        </div>
 
-      {/* Hero Section */}
-      <div id="home">
-        <Hero />
+        {/* Marketing Guide / Metrics */}
+        <MarketingGuide />
+
+        {/* About Section */}
+        <div id="about">
+          <About />
+        </div>
+
+        {/* Why Us Section */}
+
+        <div id="casestudies">
+          <CaseStudies />
+        </div>
+        {/* Case Studies Section */}
+        <div id="whyus">
+          <HowItWorks />
+        </div>
+
+        {/* Contact Section */}
+        <div id="contact">
+          <Form />
+        </div>
+
+        {/* Newsletter Section (Optional) */}
+        {/* <Newsletter /> */}
       </div>
-
-      {/* Marketing Guide / Metrics */}
-      <MarketingGuide />
-
-      {/* About Section */}
-      <div id="about">
-        <About />
-      </div>
-
-      {/* Why Us Section */}
-      <div id="whyus">
-        <HowItWorks />
-      </div>
-
-      {/* Case Studies Section */}
-      <div id="casestudies">
-        <CaseStudies />
-      </div>
-
-      {/* Contact Section */}
-      <div id="contact">
-        <Form />
-      </div>
-
-      {/* Newsletter Section (Optional) */}
-      {/* <Newsletter /> */}
     </div>
-</div>
-
   );
 };
 
