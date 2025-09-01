@@ -41,17 +41,17 @@ const Hero = () => {
              shadow-xl shadow-purple-500/30 border border-purple-200/40
              backdrop-blur-sm hover:scale-[1.02] transition-transform duration-500"
         >
-         <div className="relative aspect-video">
-  <iframe
-    className="absolute inset-0 w-full h-full"
-    src="https://www.youtube.com/embed/lo8d0Cn8UZ4?autoplay=1&mute=1&rel=0&modestbranding=1&controls=0&showinfo=0&loop=1&playlist=lo8d0Cn8UZ4"
-    title="How we work - Leagun"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-  ></iframe>
-</div>
-
+          <div className="relative aspect-video">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/lo8d0Cn8UZ4?autoplay=1&mute=1&rel=0&modestbranding=1&controls=1&loop=1&playlist=lo8d0Cn8UZ4"
+              title="How we work - Leagun"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </motion.div>
 
         {/* CTA */}
         <motion.div

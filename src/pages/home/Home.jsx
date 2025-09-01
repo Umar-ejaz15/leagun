@@ -22,20 +22,14 @@ import MarketingGuide from "./components/MarketingGuide";
 const Home = () => {
   return (
     <div>
-      {/* 🔥 SEO with react-head */}
       <Title>Leagun | Lead Generation Marketing Company</Title>
       <Meta
         name="description"
-        content="Leagun Technologies, formerly Soft Stone Technologies, has been pushing boundaries for 3 years. We’ve tested a lot, failed a lot, and figured out what actually works. That’s how our Sales Growth Engine was born — not theory, but real strategies tested in the field.
-
-Founded by Zain Noor, we focus on helping local businesses across the USA and Canada grow their sales. From HVAC companies to remodelers, dental clinics, med spas, electricians, and more, we partner with small and mid-sized businesses that want predictable, repeatable revenue.
-
-Our mission is simple: to make sure local businesses don’t just survive, but grow, with systems that deliver visibility, leads, and consistent sales."
+        content="Leagun helps local businesses in the USA & Canada grow with proven lead generation strategies and our Sales Growth Engine 🚀"
       />
       <Meta
         name="keywords"
-        content="Leagun Technologies, Soft Stone Technologies, Zain Noor, Sales Growth Engine, business growth strategies, sales growth USA, sales growth Canada, local business marketing, lead generation USA, lead generation Canada, HVAC marketing, remodeler marketing, dental clinic marketing, med spa marketing, electrician marketing, small business sales growth, mid-sized business marketing, predictable revenue systems, repeatable revenue growth, local business visibility, increase local sales, marketing for service businesses, revenue growth solutions
-"
+        content="Leagun Technologies, Sales Growth Engine, lead generation USA, lead generation Canada, business growth, HVAC marketing, dental clinic marketing, med spa marketing, electrician marketing"
       />
       <Meta name="author" content="Leagun" />
 
@@ -48,12 +42,31 @@ Our mission is simple: to make sure local businesses don’t just survive, but g
       />
       <Meta
         property="og:description"
-        content="Leagun helps businesses grow with expert lead generation strategies and marketing solutions tailored to your goals."
+        content="Leagun helps local businesses in the USA & Canada grow with proven lead generation strategies."
       />
-      <Meta property="og:image" content="/logo.jpg" />
+      <Meta property="og:image" content="https://www.leagun.com/logo.jpg" />
+
+      {/* Twitter */}
+      <Meta name="twitter:card" content="summary_large_image" />
+      <Meta
+        name="twitter:title"
+        content="Leagun | Lead Generation Marketing Company"
+      />
+      <Meta
+        name="twitter:description"
+        content="Leagun helps local businesses in the USA & Canada grow with proven lead generation strategies."
+      />
+      <Meta name="twitter:image" content="https://www.leagun.com/logo.jpg" />
+
+      {/* Favicon */}
+      <Link rel="icon" type="image/png" href="/favicon.png" />
+
+      {/* Canonical */}
+      <Link rel="canonical" href="https://www.leagun.com/" />
 
       {/* Favicon (optional extra) */}
       <Link rel="icon" href="/logo.jpg" />
+      <link rel="canonical" href="https://leagun.com/" />
 
       {/* Sticky CTA */}
       <StickyCTA />
