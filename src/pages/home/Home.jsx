@@ -26,11 +26,16 @@ const Home = () => {
       <Title>Leagun | Lead Generation Marketing Company</Title>
       <Meta
         name="description"
-        content="Leagun is a results-driven lead generation marketing company helping businesses scale with targeted strategies, high-quality leads, and proven growth solutions."
+        content="Leagun Technologies, formerly Soft Stone Technologies, has been pushing boundaries for 3 years. We’ve tested a lot, failed a lot, and figured out what actually works. That’s how our Sales Growth Engine was born — not theory, but real strategies tested in the field.
+
+Founded by Zain Noor, we focus on helping local businesses across the USA and Canada grow their sales. From HVAC companies to remodelers, dental clinics, med spas, electricians, and more, we partner with small and mid-sized businesses that want predictable, repeatable revenue.
+
+Our mission is simple: to make sure local businesses don’t just survive, but grow, with systems that deliver visibility, leads, and consistent sales."
       />
       <Meta
         name="keywords"
-        content="Leagun, lead generation, marketing company, business growth, B2B leads, digital marketing, sales funnel, demand generation"
+        content="Leagun Technologies, Soft Stone Technologies, Zain Noor, Sales Growth Engine, business growth strategies, sales growth USA, sales growth Canada, local business marketing, lead generation USA, lead generation Canada, HVAC marketing, remodeler marketing, dental clinic marketing, med spa marketing, electrician marketing, small business sales growth, mid-sized business marketing, predictable revenue systems, repeatable revenue growth, local business visibility, increase local sales, marketing for service businesses, revenue growth solutions
+"
       />
       <Meta name="author" content="Leagun" />
 
@@ -52,7 +57,7 @@ const Home = () => {
 
       {/* Sticky CTA */}
       <StickyCTA />
-      <div className="overflow-hidden">
+      <div className="overflow-hidden ">
         {/* Hero Section */}
         <div id="home">
           <Hero />

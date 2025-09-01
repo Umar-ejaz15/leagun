@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import emailjs from "emailjs-com";
+import { Mail } from "lucide-react";
 
 const Form = () => {
   const sendEmail = (e) => {
@@ -10,7 +11,7 @@ const Form = () => {
 
     emailjs
       .sendForm(
-        "service_yh908s7", // ✅ Your Service ID
+        "service_jymh6g4", // ✅ Your Service ID
         "template_ut54n2u", // ✅ Your Template ID
         e.target,
         "woM_pL2_-Rgu6fU7E" // ✅ Your Public Key
@@ -27,7 +28,7 @@ const Form = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen bg-white flex items-center justify-center px-6 sm:px-12 lg:px-32 py-24">
+    <section className="relative w-full min-h-screen flex items-center justify-center px-6 sm:px-12 lg:px-32 py-24">
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* -------- Left Content -------- */}
         <motion.div
@@ -44,6 +45,30 @@ const Form = () => {
             Fill in the form and we’ll connect with you to craft a growth
             strategy that brings in leads, sales, and ROI 🚀
           </p>
+
+          {/* Contact Info */}
+          <div className="mt-4 space-y-2 text-gray-700">
+            <p>
+              <Mail/><span className="font-semibold">Email:</span>{" "}
+              <a
+                href="mailto:contact@leagun.com"
+                className="text-purple-900 hover:underline"
+              >
+                contact@leagun.com
+              </a>
+            </p>
+            <p>
+               <span className="font-semibold">LinkedIn:</span>{" "}
+              <a
+                href="https://www.linkedin.com/company/leagun-technologies/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-900 hover:underline"
+              >
+                Leagun Technologies
+              </a>
+            </p>
+          </div>
         </motion.div>
 
         {/* -------- Right Form -------- */}
