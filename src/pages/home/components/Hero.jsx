@@ -1,23 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react"; // <-- added useState
 import { motion } from "framer-motion";
 import Buttonrgb from "@/components/Buttonrgb";
 import { AnimatedGradientTextDemo } from "@/components/AnimatedGradientTextDemo";
 import { Highlighter } from "@/components/magicui/highlighter";
 
 const Hero = () => {
+
   return (
-    <section className="relative w-full h-auto md:min-h-screen flex flex-col  px-4 sm:px-6  md:px-12 lg:px-24 bg-gradient-to-b from-purple-50 md:mt-0 to-white overflow-hidden">
+    <section className="relative w-full h-auto md:min-h-screen flex flex-col px-4 sm:px-6 md:px-12 lg:px-24 bg-gradient-to-b from-purple-50 md:mt-0 to-white overflow-hidden">
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col mt-30 items-center text-center max-w-5xl mx-auto  md:mt-30">
+      <div className="relative z-10 flex flex-col mt-30 items-center text-center max-w-5xl mx-auto md:mt-30">
         {/* Pain Point */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <AnimatedGradientTextDemo className="font-extrabold tracking-tighter leading-none text-sm md:text-[clamp(1.8rem,4vw,rem)]  drop-shadow-sm" />
+          <AnimatedGradientTextDemo className="font-extrabold tracking-tighter leading-none text-sm md:text-[clamp(1.8rem,4vw,rem)] drop-shadow-sm" />
         </motion.div>
 
         {/* Sub-Tagline */}
@@ -37,19 +38,19 @@ const Hero = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
-          className="mt-6 w-full max-w-3xl rounded-2xl overflow-hidden
-             shadow-xl shadow-purple-500/30 border border-purple-200/40
-             backdrop-blur-sm hover:scale-[1.02] transition-transform duration-500"
+          className="mt-6 w-full max-w-3xl rounded-2xl overflow-hidden shadow-xl shadow-purple-500/30 border border-purple-200/40 backdrop-blur-sm hover:scale-[1.02] transition-transform duration-500"
         >
           <div className="relative aspect-video">
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/lo8d0Cn8UZ4?autoplay=1&mute=1&rel=0&modestbranding=1&controls=1&loop=1&playlist=lo8d0Cn8UZ4"
-              title="How we work - Leagun"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
+           
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/lo8d0Cn8UZ4?rel=0&modestbranding=1&controls=1&autoplay=1"
+                title="How we work - Leagun"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+           
           </div>
         </motion.div>
 
