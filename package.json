@@ -6,8 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "postbuild": "react-snap",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "reactSnap": {
+    "include": [
+      "/"
+    ],
+    "inlineCss": true,
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
   },
   "dependencies": {
     "@radix-ui/react-separator": "^1.1.7",

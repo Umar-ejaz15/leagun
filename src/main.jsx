@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App.jsx";
 import Navigation from "./components/Navigation";
 import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
+
 import Footer from "./pages/home/components/Footer";
 
 // 👇 Import HeadProvider from react-head
