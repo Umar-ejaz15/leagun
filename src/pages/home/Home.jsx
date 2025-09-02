@@ -1,5 +1,4 @@
 import React from "react";
-import { Title, Meta, Link } from "react-head";
 
 import Hero from "./components/Hero";
 import About from "./components/About";

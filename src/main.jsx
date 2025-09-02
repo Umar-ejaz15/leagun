@@ -7,9 +7,6 @@ import { BrowserRouter } from "react-router-dom";
 
 import Footer from "./pages/home/components/Footer";
 
-// 👇 Import HeadProvider from react-head
-import { HeadProvider } from "react-head";
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
       <BrowserRouter>
