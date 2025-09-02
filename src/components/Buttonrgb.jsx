@@ -1,13 +1,22 @@
+import { Phone } from "lucide-react";
 import React from "react";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
-const Buttonrgb = ({txt}) => {
+const Buttonrgb = ({ txt }) => {
   return (
-      <a
-        href="#contact"
-        className="inline-block text-lg rounded-md  b border border-purple-600 px-6 py-2  font-semibold text-gray-800 hover:bg-purple-600 hover:text-white hover:opacity-90 transition"
+    <div>
+      <ScrollLink
+        to="contact"
+        smooth={true}
+        duration={800}
+        className="cursor-pointer border border-purple-600 bg-white text-black 
+                         hover:bg-purple-600 hover:text-white text-sm font-bold 
+                         px-6 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300"
       >
-      {txt}
-      </a>
+        <span>{txt}</span>
+      </ScrollLink>
+    </div>
   );
 };
 

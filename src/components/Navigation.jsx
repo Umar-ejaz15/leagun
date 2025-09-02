@@ -5,15 +5,29 @@ import { Separator } from "@/components/ui/separator";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Dock } from "@/components/magicui/dock";
 import { Link as ScrollLink } from "react-scroll";
-import { HomeIcon, InfoIcon, UserCheckIcon, PhoneIcon, Phone } from "lucide-react";
+import {
+  HomeIcon,
+  InfoIcon,
+  UserCheckIcon,
+  PhoneIcon,
+  Phone,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
 const DATA = [
   { href: "home", label: "Home", icon: <HomeIcon className="w-5 h-5" /> },
   { href: "about", label: "About", icon: <InfoIcon className="w-5 h-5" /> },
-  { href: "whyus", label: "Why Us", icon: <UserCheckIcon className="w-5 h-5" /> },
-  { href: "contact", label: "Contact", icon: <PhoneIcon className="w-5 h-5" /> },
+  {
+    href: "whyus",
+    label: "Why Us",
+    icon: <UserCheckIcon className="w-5 h-5" />,
+  },
+  {
+    href: "contact",
+    label: "Contact",
+    icon: <PhoneIcon className="w-5 h-5" />,
+  },
 ];
 
 export default function Navigation() {
@@ -91,24 +105,27 @@ export default function Navigation() {
               className="cursor-pointer border border-purple-600 bg-white text-black 
                          hover:bg-purple-600 hover:text-white text-sm font-bold 
                          px-6 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300"
-              onClick={() => (window.location.href = "mailto:contact@leagun.com")}
+              onClick={() =>
+                (window.location.href = "mailto:contact@leagun.com")
+              }
             >
               Email Us
             </Button>
 
             {/* Book a Call */}
-            <motion.a
-              href="#contact"
-              className="flex items-center gap-2 px-6 py-2 text-sm font-semibold 
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              offset={-80}
+              duration={800}
+              className="flex items-center cursor-pointer gap-2 px-6 py-2 text-sm font-semibold 
                          rounded-md shadow-md bg-purple-800 text-white 
                          hover:bg-white hover:text-black hover:shadow-lg 
                          transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
               <Phone className="w-5 h-5" />
               <span>Book a Call</span>
-            </motion.a>
+            </ScrollLink>
           </motion.div>
         </Dock>
       </TooltipProvider>

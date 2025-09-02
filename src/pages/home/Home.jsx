@@ -3,19 +3,9 @@ import { Title, Meta, Link } from "react-head";
 
 import Hero from "./components/Hero";
 import About from "./components/About";
-import WhyUs from "./components/WhyUs";
 import HowItWorks from "./components/HowItWorks";
-import Services from "./components/Services";
-import Reviews from "./components/Reviews";
-import Faq3 from "./components/FAQ";
-import Footer from "./components/Footer";
-import Matrices from "./components/Matrices";
-import Newsletter from "./components/Newsletter";
-import ClientLogos from "./components/ClientLogos";
-import Pricing from "./components/Pricing";
 import CaseStudies from "./components/CaseStudies";
 import StickyCTA from "./components/StickyCTA";
-import Final from "./components/Final";
 import Form from "../contact/components/Form";
 import MarketingGuide from "./components/MarketingGuide";
 
@@ -46,20 +36,10 @@ const Home = () => {
       />
       <Meta property="og:image" content="https://www.leagun.com/logo.jpg" />
 
-      {/* Twitter */}
-      <Meta name="twitter:card" content="summary_large_image" />
-      <Meta
-        name="twitter:title"
-        content="Leagun | Lead Generation Marketing Company"
-      />
-      <Meta
-        name="twitter:description"
-        content="Leagun helps local businesses in the USA & Canada grow with proven lead generation strategies."
-      />
-      <Meta name="twitter:image" content="https://www.leagun.com/logo.jpg" />
+     
 
       {/* Favicon */}
-      <Link rel="icon" type="image/png" href="/favicon.png" />
+      <Link rel="icon" type="image/png" href="/logo.jpg" />
 
       {/* Canonical */}
       <Link rel="canonical" href="https://www.leagun.com/" />

@@ -55,7 +55,7 @@ const caseStudies = {
 
 const CaseStudies = () => {
   return (
-    <section className="relative py-20 px-6 md:px-12 bg-gradient-to-b from-white to-purple-50 overflow-hidden">
+    <section className="relative py-10 px-6 md:px-12 bg-gradient-to-br from-purple-200 via-white md:mt-0 to-purple-200 overflow-hidden">
       {/* Decorative background gradient blob */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[400px] bg-purple-100/40 rounded-full blur-3xl -z-10" />
 

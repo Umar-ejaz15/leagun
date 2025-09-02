@@ -15,7 +15,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-br from-purple-50 via-white to-purple-50 w-full border-t border-purple-100 relative">
+    <div className="bg-gradient-to-l from-purple-200 via-white to-purple-200 w-full border-t border-purple-100 relative">
       {/* ✅ Gradient Divider */}
       <div className="w-full h-[2px] bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200" />
 

@@ -2,46 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary Meta Tags -->
+    <!-- Basic SEO -->
     <title>Leagun | Lead Generation Marketing Company</title>
-    <meta name="title" content="Leagun | Lead Generation Marketing Company" />
     <meta
       name="description"
       content="Leagun is a results-driven lead generation marketing company helping businesses scale with targeted strategies, high-quality leads, and proven growth solutions."
     />
-    <meta
-      name="keywords"
-      content="Leagun, lead generation, marketing company, business growth, B2B leads, digital marketing, sales funnel, demand generation"
-    />
-    <meta name="author" content="Leagun" />
-
-    <!-- Robots -->
     <meta name="robots" content="index, follow" />
+    <meta name="author" content="Leagun" />
     <meta name="language" content="English" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.png" type="image/png" />
+
+    <!-- Schema Markup (Organization) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Leagun",
+        "url": "https://www.leagun.com",
+        "logo": "https://www.leagun.com/logo.jpg",
+        "description": "Leagun is a lead generation marketing company helping businesses grow with high-quality leads and proven strategies.",
+        "sameAs": [
+          "https://www.facebook.com/leagun",
+          "https://www.linkedin.com/company/leagun",
+          "https://twitter.com/leagun"
+        ]
+      }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
-    <script type="application/ld+json">
-      {`
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Leagun",
-          "url": "https://www.leagun.com",
-          "logo": "https://www.leagun.com/logo.jpg",
-          "description": "Leagun is a lead generation marketing company helping businesses grow with high-quality leads and proven strategies.",
-          "sameAs": [
-            "https://www.facebook.com/leagun",
-            "https://www.linkedin.com/company/leagun",
-            "https://twitter.com/leagun"
-          ]
-        }
-      `}
-    </script>
-
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

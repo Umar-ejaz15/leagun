@@ -10,10 +10,10 @@ import { Mail } from "lucide-react";
 
 const About = () => {
   return (
-    <section className="relative py-5 lg:px-0 overflow-hidden bg-gradient-to-b from-white to-purple-50">
+    <section className="relative  lg:px-0 overflow-hidden bg-gradient-to-tl from-purple-200 via-white md:mt-0 to-purple-200">
       {/* Heading */}
       <motion.h1
-        className="text-[clamp(1.5rem,4vw,3.2rem)] font-extrabold text-center bg-clip-text text-transparent 
+        className="text-[clamp(1.5rem,4vw,3.2rem)] font-extrabold text-center py-5 bg-clip-text text-transparent 
                    bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-sm mb-5 max-w-4xl mx-auto leading-snug"
       >
         About{" "}
@@ -25,7 +25,7 @@ const About = () => {
       </motion.h1>
 
       {/* Company Section */}
-      <div className="relative px-6 z-10 max-w-5xl mx-auto mb-5 text-center">
+      <div className="relative px-6  z-10 max-w-5xl mx-auto mb-5 text-center">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ const About = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-8 sm:text-xl md:text-2xl text-gray-700 leading-relaxed"
+          className="mt-8 sm:text-xl md:text-2xl text-gray-800 leading-relaxed"
         >
           Founded by <span className="font-bold">Zain Noor</span>, we focus on
           helping local businesses across the{" "}
@@ -67,7 +67,7 @@ const About = () => {
       </div>
 
       {/* Leadership Section */}
-      <div className="relative px-6 bg-purple-50 py-10 z-10 mx-auto">
+      <div className="relative px-6 bg-purple-50 py-5 z-10 mx-auto">
         <div className="flex justify-center mb-10">
           <Highlighter action="underline" color="purple">
             <motion.h2
@@ -145,7 +145,7 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mt-16 max-w-5xl mx-auto text-center bg-gradient-to-r from-purple-50 to-white 
+          className="mt-5 max-w-5xl mx-auto text-center bg-gradient-to-r from-purple-50 to-white 
                    backdrop-blur-xl rounded-2xl shadow-lg px-10 py-12 border border-purple-100"
         >
           <h2

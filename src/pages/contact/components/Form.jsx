@@ -28,7 +28,7 @@ const Form = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center px-6 sm:px-12 lg:px-32 py-24">
+    <section className="relative bg-gradient-to-br from-purple-200 via-white md:mt-0 to-purple-200 w-full min-h-screen flex items-center justify-center px-6 sm:px-12 lg:px-32 py-24">
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* -------- Left Content -------- */}
         <motion.div
@@ -46,24 +46,25 @@ const Form = () => {
             strategy that brings in leads, sales, and ROI 🚀
           </p>
 
+          <hr className="w-full  bg-gray-800/20" />
           {/* Contact Info */}
           <div className="mt-4 space-y-2 text-gray-700">
             <p>
-              <Mail/><span className="font-semibold">Email:</span>{" "}
+              <span className="font-semibold">Email:</span>{" "}
               <a
                 href="mailto:contact@leagun.com"
-                className="text-purple-900 hover:underline"
+                className="text-purple-900 underline hover:text-purple-950"
               >
                 contact@leagun.com
               </a>
             </p>
             <p>
-               <span className="font-semibold">LinkedIn:</span>{" "}
+              <span className="font-semibold">LinkedIn:</span>{" "}
               <a
                 href="https://www.linkedin.com/company/leagun-technologies/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-purple-900 hover:underline"
+                className="text-purple-900 underline hover:text-purple-950"
               >
                 Leagun Technologies
               </a>
