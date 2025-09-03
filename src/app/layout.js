@@ -19,6 +19,9 @@ export const metadata = {
     "Leagun is a professional lead generation and sales growth agency helping businesses in the USA and Canada scale faster. We specialize in B2B and B2C lead generation, conversion optimization, marketing automation, and growth strategies that drive high-quality leads, increase revenue, and maximize ROI.",
   keywords: [
     "Leagun",
+    ,
+    "Leagun Tech",
+    "Leagun Technology",
     "Lead Generation Agency",
     "Sales Growth Agency",
     "B2B Lead Generation",
@@ -64,14 +67,27 @@ export const metadata = {
     type: "website",
   },
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon-32x32.png", // main favicon
+    shortcut: "/favicon.ico", // optional fallback
+    apple: "/apple-touch-icon.png", // iOS devices
+    other: [
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        url: "/favicon-16x16.png",
+      },
+      { rel: "manifest", url: "/site.webmanifest" },
+    ],
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
 
         {/* ✅ JSON-LD Organization Schema for Google Rich Results */}

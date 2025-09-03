@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import React from "react";
 import { Separator } from "@/components/ui/separator";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,10 +11,9 @@ import {
   PhoneIcon,
   Phone,
 } from "lucide-react";
-import { motion } from "framer-motion"
-
 
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 const DATA = [
   { href: "home", label: "Home", icon: <HomeIcon className="w-5 h-5" /> },
@@ -34,12 +32,7 @@ const DATA = [
 
 export default function Navigation() {
   return (
-    <motion.div
-      className="fixed top-0 left-1/2 -translate-x-1/2 z-[100] px-4 w-full md:w-auto"
-      initial={{ opacity: 0, y: -30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
+    <div className="fixed top-0 left-1/2 -translate-x-1/2 z-[100] px-4 w-full md:w-auto">
       <TooltipProvider>
         <Dock
           direction="middle"
@@ -48,26 +41,23 @@ export default function Navigation() {
           flex justify-between items-center border border-gray-200/40"
         >
           {/* Logo */}
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="flex-shrink-0"
-          >
-            <img src="/logo.jpg" alt="Leagun Logo" className="h-10 w-auto" />
-          </motion.h1>
+          <h1 className="flex-shrink-0">
+            <Image
+              width={80}
+              height={80}
+              loading="lazy"
+              src="/logo.jpg"
+              alt="Leagun Logo"
+              className="h-10 w-auto"
+            />
+          </h1>
 
           <Separator orientation="vertical" className="h-6 hidden sm:block" />
 
           {/* Navigation Links */}
           <div className="flex items-center gap-3 md:gap-5">
             {DATA.map((item, index) => (
-              <motion.div
-                key={item.href}
-                initial={{ opacity: 0, y: -10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.15, duration: 0.4 }}
-              >
+              <div key={item.href}>
                 <ScrollLink
                   to={item.href}
                   smooth={true}
@@ -89,21 +79,17 @@ export default function Navigation() {
                     bg-purple-600 transition-all duration-300 group-hover:w-full"
                   ></span>
                 </ScrollLink>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           <Separator orientation="vertical" className="h-6 hidden sm:block" />
 
           {/* CTA Buttons */}
-          <motion.div
-            className="hidden sm:flex items-center gap-3"
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-          >
+          <div className="hidden sm:flex items-center gap-3">
             {/* Email Us */}
             <Button
+              aria-label="Email Us at Leagun"
               className="cursor-pointer border border-purple-600 bg-white text-black 
                          hover:bg-purple-600 hover:text-white text-sm font-bold 
                          px-6 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300"
@@ -128,9 +114,9 @@ export default function Navigation() {
               <Phone className="w-5 h-5" />
               <span>Book a Call</span>
             </ScrollLink>
-          </motion.div>
+          </div>
         </Dock>
       </TooltipProvider>
-    </motion.div>
+    </div>
   );
 }
