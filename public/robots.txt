@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://leagun.com/sitemap.xml
