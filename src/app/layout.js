@@ -14,9 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title:
-    "Leagun | Top Lead Generation & Sales Growth Agency for Businesses in USA & Canada",
+    "Leagun Technologies | Driving Business Growth with High-Quality Leads & Marketing Automation",
   description:
-    "Leagun is a professional lead generation and sales growth agency helping businesses in the USA and Canada scale faster. We specialize in B2B and B2C lead generation, conversion optimization, marketing automation, and growth strategies that drive high-quality leads, increase revenue, and maximize ROI.",
+    "Leagun Technologies is a trusted lead generation and sales growth agency helping businesses in the USA and Canada scale effectively. We specialize in B2B and B2C lead generation, marketing automation, conversion optimization, and strategic growth solutions that drive high-quality leads, boost revenue, and maximize ROI.",
+
   keywords: [
     "Leagun",
     "Leagun Tech",
@@ -40,7 +41,51 @@ export const metadata = {
     "Customer Acquisition",
     "ROI Optimization",
     "Online Marketing Services",
+    "Lead Generation Services",
+    "Sales Leads Provider",
+    "Top Lead Generation Company",
+    "Sales Acceleration",
+    "Business Expansion Services",
+    "Digital Lead Generation",
+    "Lead Management Solutions",
+    "Targeted Lead Generation",
+    "B2B Sales Leads",
+    "B2C Sales Leads",
+    "Marketing & Sales Growth",
+    "Lead Conversion Strategies",
+    "Client Acquisition Solutions",
+    "Automated Lead Generation",
+    "Marketing Analytics Tools",
+    "Revenue Growth Consulting",
+    "Sales Performance Optimization",
+    "Lead Growth Engine",
+    "Business Development Solutions",
+    "Digital Sales Optimization",
+    "Lead Prospecting Agency",
+    "Qualified Leads Provider",
+    "Sales Pipeline Optimization",
+    "Lead Generation Strategies USA",
+    "Lead Generation Strategies Canada",
+    "Enterprise Lead Generation",
+    "SMB Lead Generation Services",
+    "High-Intent Leads",
+    "Lead Generation Experts",
+    "Growth Marketing Agency",
+    "Sales Funnel Management",
+    "ROI-Driven Marketing",
+    "Digital Marketing Growth",
+    "Customer Acquisition Strategies",
+    "Leagun Growth Engine",
+    "Leagun Sales Solutions",
+    "Lead Generation Platform",
+    "Business Lead Accelerator",
+    "Sales & Marketing Consulting",
+    "B2B Marketing Solutions",
+    "B2C Marketing Solutions",
+    "Performance-Driven Lead Gen",
+    "Lead Generation Optimization",
   ],
+
   authors: [{ name: "Leagun" }],
   robots: "index, follow",
   metadataBase: new URL("https://www.leagun.com"),
@@ -49,9 +94,9 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "Leagun | Top Lead Generation & Sales Growth Agency for Businesses in USA & Canada",
+      "Leagun Technologies | Driving Business Growth with High-Quality Leads & Marketing Automation",
     description:
-      "Boost your business growth with Leagun’s professional lead generation and sales growth strategies. Our agency delivers high-quality leads, conversion optimization, marketing automation, and growth solutions to help businesses dominate the market and maximize ROI in the USA & Canada.",
+      "Leagun Technologies is a trusted lead generation and sales growth agency helping businesses in the USA and Canada scale effectively. We specialize in B2B and B2C lead generation, marketing automation, conversion optimization, and strategic growth solutions that drive high-quality leads, boost revenue, and maximize ROI.",
     url: "https://www.leagun.com/",
     siteName: "Leagun Technologies",
     images: [
@@ -84,15 +129,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* ✅ Sitemap reference */}
-        <link
-          rel="sitemap"
-          type="application/xml"
-          title="Sitemap"
-          href="/sitemap.xml"
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -106,11 +142,11 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Leagun",
+              name: "Leagun Technologies",
               url: "https://www.leagun.com",
               logo: "https://www.leagun.com/logo.jpg",
               description:
-                "Leagun is a professional lead generation and sales growth agency helping businesses scale with high-quality leads, conversion optimization, and marketing automation in the USA & Canada.",
+                "Leagun Technologies is a trusted lead generation and sales growth agency helping businesses in the USA and Canada scale effectively. We specialize in B2B and B2C lead generation, marketing automation, conversion optimization, and strategic growth solutions that drive high-quality leads, boost revenue, and maximize ROI.",
               sameAs: [
                 "https://www.facebook.com/leagun",
                 "https://www.linkedin.com/company/leagun-technologies/",

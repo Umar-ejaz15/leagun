@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 const caseStudies = {
@@ -62,42 +59,31 @@ const CaseStudies = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[400px] bg-purple-100/40 rounded-full blur-3xl -z-10" />
 
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <h1
           className="text-[clamp(2rem,4vw,3rem)] font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow mb-4"
         >
           Real Case Studies, Real Results
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+        </h1>
+        <p
           className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto"
         >
           We’ve helped businesses in home services, healthcare, finance, and more dominate with
           Google Ads & Meta Ads. Here’s how our campaigns performed:
-        </motion.p>
+        </p>
       </div>
 
       {/* Google Ads Section */}
-      <div className="max-w-6xl mx-auto mb-16">
-        <h3 className="text-2xl md:text-3xl font-bold text-purple-700 mb-8 text-center">
+      <section className="max-w-6xl mx-auto mb-16">
+        <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-8 text-center">
           Google Ads Case Studies
-        </h3>
+        </h2>
         <div className="space-y-12">
           {caseStudies.google.map((item, i) => (
-            <motion.div
+            <div
               key={i}
               className={`flex flex-col md:flex-row items-center gap-6 ${
                 i % 2 === 1 ? "md:flex-row-reverse" : ""
               } bg-white/70 backdrop-blur-lg rounded-xl shadow-md p-6 border border-purple-100`}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
             >
               {/* Image */}
               <div className="w-full md:w-1/2 relative h-64">
@@ -112,7 +98,7 @@ const CaseStudies = () => {
 
               {/* Content */}
               <div className="w-full md:w-1/2 text-center md:text-left">
-                <h4 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">{item.title}</h4>
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-700 text-base mb-4">{item.desc}</p>
                 <ul className="flex flex-wrap gap-2">
                   {item.highlights.map((point, idx) => (
@@ -125,26 +111,23 @@ const CaseStudies = () => {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* Meta Ads Section */}
       <div className="max-w-6xl mx-auto">
-        <h3 className="text-2xl md:text-3xl font-bold text-purple-700 mb-8 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-8 text-center">
           Meta Ads Case Studies
-        </h3>
+        </h2>
         <div className="space-y-12">
           {caseStudies.meta.map((item, i) => (
-            <motion.div
+            <div
               key={i}
               className={`flex flex-col md:flex-row items-center gap-6 ${
                 i % 2 === 1 ? "md:flex-row-reverse" : ""
               } bg-white/70 backdrop-blur-lg rounded-xl shadow-md p-6 border border-purple-100`}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
             >
               {/* Image */}
               <div className="w-full md:w-1/2 relative h-64">
@@ -159,20 +142,20 @@ const CaseStudies = () => {
 
               {/* Content */}
               <div className="w-full md:w-1/2 text-center md:text-left">
-                <h4 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">{item.title}</h4>
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-700 text-base mb-4">{item.desc}</p>
                 <ul className="flex flex-wrap gap-2">
                   {item.highlights.map((point, idx) => (
                     <li
                       key={idx}
-                      className="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm shadow-sm"
+                      className="bg-purple-50 text-left text-purple-700 px-3 py-1 rounded-full text-sm shadow-sm"
                     >
                       {point}
                     </li>
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

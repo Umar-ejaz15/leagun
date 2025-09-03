@@ -2,7 +2,6 @@ import Buttonrgb from "@/components/Buttonrgb";
 import { Highlighter } from "@/components/magicui/highlighter";
 import React from "react";
 import { Mail } from "lucide-react";
-import Image from "next/image";
 
 const About = () => {
   return (
@@ -90,9 +89,7 @@ const About = () => {
 
           {/* Right: Image */}
           <figure className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <Image
-            width={80}
-            height={80}
+            <img
               src="/pic.jpg"
               alt="Zain Noor, Founder of Leagun Technologies"
               className="rounded-md w-full md:w-2/4 object-cover border-4 border-purple-200 shadow-lg transition-transform duration-300"

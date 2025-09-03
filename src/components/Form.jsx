@@ -1,6 +1,5 @@
-"use client";
+"use client"
 import React from "react";
-import { motion }from "framer-motion"
 
 import { Button } from "@/components/ui/button";
 import emailjs from "emailjs-com";
@@ -32,11 +31,8 @@ const Form = () => {
     <section className="relative bg-gradient-to-br from-purple-200 via-white md:mt-0 to-purple-200 w-full min-h-screen flex items-center justify-center px-6 sm:px-12 lg:px-32 py-24">
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* -------- Left Content -------- */}
-        <motion.div
+        <div
           className="flex flex-col space-y-6"
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
             Sign Up to Build Your{" "}
@@ -71,15 +67,12 @@ const Form = () => {
               </a>
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* -------- Right Form -------- */}
-        <motion.form
+        <form
           onSubmit={sendEmail}
           className="bg-purple-50 text-black p-8 rounded-2xl shadow-lg flex flex-col space-y-6"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
         >
           <input
             type="text"
@@ -132,7 +125,7 @@ const Form = () => {
           >
             Submit Application →
           </Button>
-        </motion.form>
+        </form>
       </div>
     </section>
   );

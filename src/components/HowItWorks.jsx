@@ -1,4 +1,3 @@
-"use client"
 import React from "react";
 import {
   Globe,
@@ -9,7 +8,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Highlighter } from "@/components/magicui/highlighter";
-import { motion } from "framer-motion"
 
 
 const HowItWorks = () => {
@@ -51,25 +49,19 @@ const HowItWorks = () => {
 
       {/* Heading */} 
       <div className="max-w-5xl mx-auto text-center mb-12 relative z-10">
-        <motion.h2
+        <h2
           className="text-[clamp(2rem,4vw,3rem)] font-extrabold leading-tight mb-4"
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
         >
           How It{" "}
           <Highlighter action="underline" color="white">
             Works
           </Highlighter>
-        </motion.h2>
-        <motion.p
+        </h2>
+        <p
           className="text-base md:text-lg text-purple-100 max-w-xl mx-auto"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
         >
           A simple 5-step process to take you from visibility to booked appointments.
-        </motion.p>
+        </p>
       </div>
 
       {/* Steps with Arrows */} 
@@ -79,11 +71,8 @@ const HowItWorks = () => {
           return (
             <div key={i} className="flex items-center">
               {/* Step Card */} 
-              <motion.div
+              <div
                 className="relative bg-white/10 backdrop-blur-xl rounded-xl p-10 text-center border border-purple-300 shadow-lg hover:shadow-xl h transition-all duration-300 w-76"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.15, duration: 0.1 }}
                
               >
                 {/* Step Number */} 
@@ -100,19 +89,16 @@ const HowItWorks = () => {
                 <p className="text-purple-100 text-md leading-relaxed">
                   {step.desc}
                 </p>
-              </motion.div>
+              </div>
 
               {/* Arrow (only show if not the last step) */} 
               {i < steps.length - 1 && (
-                <motion.div
+                <div
                   className="hidden md:flex items-center justify-center mx-3"
-                  initial={{ opacity: 0, x: -15 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.2 + 0.1, duration: 0.4 }}
                  
                 >
                   <ArrowRight className="w-7 h-7 text-purple-200" />
-                </motion.div>
+                </div>
               )}
             </div>
           );
