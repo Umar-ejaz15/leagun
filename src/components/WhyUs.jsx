@@ -84,7 +84,7 @@ const WhyUs = () => {
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
                 {item.title}
               </h3>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+              <p className="text-gray-200 text-sm md:text-base leading-relaxed">
                 {item.desc}
               </p>
             </article>

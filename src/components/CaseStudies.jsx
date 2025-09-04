@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Highlighter } from "./magicui/highlighter";
 
 const caseStudies = {
   google: [
@@ -71,7 +72,10 @@ const CaseStudies = () => {
       {/* Google Ads Case Studies */}
       <section className="max-w-6xl mx-auto mb-16">
         <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-8 text-center">
+          <Highlighter action="underline" color="purple" >
+
           Google Ads Case Studies
+          </Highlighter>
         </h2>
         <div className="space-y-12">
           {caseStudies.google.map((item, i) => (
@@ -109,7 +113,10 @@ const CaseStudies = () => {
       {/* Meta Ads Case Studies */}
       <section className="max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-8 text-center">
+          <Highlighter action="underline" color="purple" >
+
           Meta Ads Case Studies
+          </Highlighter>
         </h2>
         <div className="space-y-12">
           {caseStudies.meta.map((item, i) => (
@@ -131,7 +138,7 @@ const CaseStudies = () => {
               <div className="w-full md:w-1/2 text-center md:text-left">
                 <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-700 text-base mb-4">{item.desc}</p>
-                <ul className="flex flex-wrap gap-2">
+                <ul className="flex flex-wrap gap-2 text-left">
                   {item.highlights.map((point, idx) => (
                     <li key={idx} className="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm shadow-sm">
                       {point}

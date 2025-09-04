@@ -2,101 +2,70 @@ import React from "react";
 import Buttonrgb from "@/components/Buttonrgb";
 import { Highlighter } from "@/components/magicui/highlighter";
 import { Mail } from "lucide-react";
-import Script from "next/script";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="relative lg:px-0 overflow-hidden bg-gradient-to-tl from-purple-200 via-white md:mt-0 to-purple-200"
+      className="relative lg:px-0 overflow-hidden bg-gradient-to-tl from-purple-200 via-white to-purple-200"
       aria-labelledby="about-heading"
     >
       {/* Heading */}
-      {/* Heading */}
-      <div className="text-center py-5">
+      <div className="text-center py-8">
         <h1
           id="about-heading"
-          className="text-[clamp(1.5rem,4vw,3.2rem)] font-extrabold bg-clip-text text-transparent 
-                     bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-sm mb-5 max-w-4xl mx-auto leading-snug"
+          className="text-xl md:text-2xl font-bold text-gray-800 mb-2 tracking-tight"
         >
-          About{" "}
-          <Highlighter action="underline" color="purple">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
-              <b>Leagun Technologies</b>
-            </span>
-          </Highlighter>
+          About
         </h1>
+        <Highlighter action="underline" color="purple">
+          <h2 className="text-2xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-sm max-w-4xl mx-auto leading-snug">
+            Leagun Technologies
+          </h2>
+        </Highlighter>
       </div>
 
-      {/* Company Section */}
-      <div className="relative px-6 z-10 max-w-6xl mx-auto mb-10 text-center">
-        <p className="sm:text-xl md:text-xl text-gray-900 leading-relaxed mb-6">
-          <strong>Leagun Technologies</strong>, formerly Soft Stone
-          Technologies, has been pushing boundaries for 3 years. We’ve tested a
-          lot, failed a lot, and figured out what actually works. That’s how our{" "}
-          <strong>Sales Growth Engine </strong>
-          was born — not theory, but real strategies tested in the field.
+      {/* Company Info */}
+      <div className="max-w-5xl mx-auto px-6 text-center space-y-6 mb-12">
+        <p className="text-gray-900 sm:text-lg md:text-xl leading-relaxed">
+          <strong>Leagun Technologies</strong>, formerly Soft Stone Technologies, has been pushing boundaries for 3 years. We’ve tested a lot, failed a lot, and figured out what actually works. That’s how our <strong>Sales Growth Engine</strong> was born — not theory, but real strategies tested in the field.
         </p>
-
-        <p className="sm:text-xl md:text-xl  text-gray-800 leading-relaxed mb-6">
-          Founded by <strong>Zain Noor</strong>,we focus on helping local
-          businesses across the <strong>USA & Canada</strong> grow their sales.
-          From HVAC companies to remodelers, dental clinics, med spas,
-          electricians, and more, we partner with small and mid-sized businesses
-          that want predictable, repeatable revenue.
+        <p className="text-gray-800 sm:text-lg md:text-xl leading-relaxed">
+          Founded by <strong>Zain Noor</strong>, we focus on helping local businesses across the <strong>USA and Canada</strong> grow their sales. From HVAC companies to remodelers, dental clinics, med spas, electricians, and more, we partner with small and mid-sized businesses that want predictable, repeatable revenue.
         </p>
-
-        <p className="sm:text-xl  md:text-xl text-gray-900 leading-relaxed">
-          Our mission: local businesses don’t just <strong>survive</strong>,
-          they <strong>grow</strong> — with systems delivering visibility,
-          leads, and consistent sales.
+        <p className="text-gray-900 sm:text-lg md:text-xl leading-relaxed">
+          Our mission is simple: to make sure local businesses don’t just <strong>survive</strong>, but <strong>grow</strong>, with systems that deliver visibility, leads, and consistent sales.
         </p>
       </div>
 
       {/* Leadership Section */}
-      <section
-        className="relative px-6 bg-purple-50 py-10 z-10 mx-auto"
-        aria-labelledby="leadership-heading"
-      >
-        <header className="flex justify-center mb-10">
+      <section className="bg-white/70 backdrop-blur-md rounded-lg mb-5 shadow-lg py-10 px-6 md:px-12 max-w-6xl mx-auto">
+        <header className="text-center mb-10">
           <Highlighter action="underline" color="purple">
-            <h2
-              id="leadership-heading"
-              className="text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-center bg-clip-text text-transparent 
-                         bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-sm max-w-4xl mx-auto leading-snug"
-            >
+            <h2 className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400">
               Leadership
             </h2>
           </Highlighter>
         </header>
 
-        <div className="grid lg:grid-cols-2 max-w-6xl justify-center mx-auto items-center gap-10">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Left: Text */}
-          <div className="order-2 lg:order-1">
-            <h3 className="text-4xl font-bold text-gray-900 mb-3">Zain Noor</h3>
-            <p className="text-purple-700 font-semibold text-xl mb-3">
+          <div className="order-2 lg:order-1 space-y-5">
+            <h3 className="text-2xl md:text-3xl underline font-bold text-gray-900">Zain Noor</h3>
+            <p className="text-purple-700 font-semibold text-lg md:text-xl">
               Founder, Leagun Technologies | Sales Growth Specialist
             </p>
-
-            <p className="text-gray-700 sm:text-lg md:text-xl mb-4">
-              Zain has spent <strong>5+ years</strong>
-              selling in some of the toughest markets — USA, UK, and UAE —
-              working with global companies and leading Mid-Market sales at the
-              multi-billion-dollar <strong>Motive Technologies.</strong>
+            <p className="text-gray-700 sm:text-lg md:text-xl">
+              Zain has spent <strong>5+ years</strong> selling in some of the toughest markets — USA, UK, and UAE — working with global companies and leading Mid-Market sales at the multi-billion-dollar <strong>Motive Technologies</strong>.
+            </p>
+            <p className="text-gray-700 sm:text-lg md:text-xl">
+              His edge? Taking messy, underperforming pipelines and turning them into <strong>predictable sales engines</strong>. Not theory, not fluff, just systems proven to win more deals, generate repeatable revenue, and actually <strong>grow businesses</strong>.
             </p>
 
-            <p className="text-gray-700 sm:text-lg md:text-xl mb-6">
-              His edge? Taking messy, underperforming pipelines and turning them
-              into <strong>predictable sales engines. </strong>
-              Not theory, not fluff, just systems proven to win more deals,
-              generate repeatable revenue, and actually{" "}
-              <strong>grow businesses.</strong>
-            </p>
-
-            {/* Contact Section */}
-            <div className="mt-6">
-              <h4 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <Mail className="w-6 h-6 text-purple-600" /> Contact Me
+            {/* Contact */}
+            <div className="mt-6 flex flex-col items-start gap-2">
+              <h4 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                <Mail className="w-5 h-5 text-purple-600" /> Contact Me
               </h4>
               <a
                 href="mailto:workwithzain@yahoo.com"
@@ -112,58 +81,25 @@ const About = () => {
             <img
               src="/pic.jpg"
               alt="Zain Noor, Founder of Leagun Technologies"
-              className="rounded-md w-full md:w-2/4 object-cover border-4 border-purple-200 shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+              className="rounded-2xl shadow-xl border-4 border-purple-200 transition-transform hover:scale-105 duration-500"
             />
           </figure>
         </div>
 
-        {/* CTA Section */}
-        <div
-          className="mt-12 max-w-5xl mx-auto text-center bg-gradient-to-r from-purple-50 to-white 
-                        backdrop-blur-xl rounded-2xl shadow-lg px-10 py-12 border border-purple-100"
-        >
-          <h2
-            className="text-[clamp(1.8rem,4vw,2.5rem)] bg-clip-text text-transparent bg-gradient-to-r 
-                         from-purple-500 via-purple-600 to-purple-400 font-extrabold mb-4"
-          >
+        {/* CTA */}
+        <div className="mt-10 text-center bg-gradient-to-r from-purple-50 to-white backdrop-blur-xl rounded-2xl shadow-lg px-2 py-12 border border-purple-100">
+          <h2 className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400 mb-4">
             Ready to Scale with Us?
           </h2>
-          <p className="text-gray-700 sm:text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed">
-            Book a free consultation with Zain and discover how{" "}
-            <strong>Leagun Technologies</strong> can help your business thrive
-            with predictable sales growth.
+          <p className="text-gray-700 sm:text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+            Let’s build a predictable system for your sales growth. Book a free consultation with Zain and discover how <strong>Leagun Technologies</strong> can help your business thrive.
           </p>
           <Buttonrgb
-            txt="🚀 Book My Free Consultation →"
-            className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-500 
-                       hover:from-purple-700 hover:via-purple-800 hover:to-purple-600 
-                       text-white shadow-md hover:shadow-xl hover:shadow-purple-400/40
-                       transition-all duration-300 px-10 py-5 rounded-full text-lg font-semibold"
-            aria-label="Book your free consultation with Leagun Technologies"
+            txt="Book My Free Consultation"
+            className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-500 hover:from-purple-700 hover:via-purple-800 hover:to-purple-600 text-white shadow-md hover:shadow-xl transition-all duration-300 px-10 py-5 rounded-full text-lg font-semibold"
           />
         </div>
       </section>
-
-      {/* Structured Data */}
-      <Script id="about-schema" type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Leagun Technologies",
-          url: "https://www.leagun.com",
-          logo: "https://www.leagun.com/logo.jpg",
-          founder: {
-            "@type": "Person",
-            name: "Zain Noor",
-            email: "workwithzain@yahoo.com",
-          },
-          description:
-            "Leagun Technologies helps local businesses in USA & Canada grow sales with proven lead generation, marketing automation, and appointment-setting strategies.",
-          sameAs: [
-            "https://www.linkedin.com/company/leagun-technologies",
-          ],
-        })}
-      </Script>
     </section>
   );
 };

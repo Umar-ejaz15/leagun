@@ -12,6 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Default metadata (can be overridden per page)
 export const metadata = {
   title:
     "Leagun Technologies | Lead Generation & Sales Growth Agency for USA & Global Markets",
@@ -31,8 +32,10 @@ export const metadata = {
     "Business Growth Services USA",
     "Digital Marketing Solutions",
     "Leagun Technologies",
+    "Leagun ",
+    "Leagun Tech",
   ],
-  authors: [{ name: "Leagun" }],
+  authors: [{ name: "Leagun Technologies" }],
   robots: "index, follow",
   metadataBase: new URL("https://www.leagun.com"),
   alternates: {
@@ -47,7 +50,7 @@ export const metadata = {
     siteName: "Leagun Technologies",
     images: [
       {
-        url: "https://www.leagun.com/og-banner.jpg", // ✅ create this banner instead of just logo
+        url: "https://www.leagun.com/og-banner.jpg",
         width: 1200,
         height: 630,
         alt: "Leagun Technologies - Lead Generation & Sales Growth Agency",
@@ -58,7 +61,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@leagun", // even if you don’t have, you can leave null or brand it later
+    site: "@leagun_tech",
     title: "Leagun Technologies | Lead Generation & Growth Experts",
     description:
       "We help businesses worldwide grow with B2B & B2C lead generation, automation, and ROI-driven marketing strategies.",
@@ -83,12 +86,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-
-        {/* ✅ JSON-LD Organization Schema for Google Rich Results */}
+      <head>
+        {/* JSON-LD for LocalBusiness */}
         <Script
           id="local-business-schema"
           type="application/ld+json"
@@ -112,21 +111,21 @@ export default function RootLayout({ children }) {
                 addressCountry: "Worldwide",
               },
               sameAs: [
-                "https://www.linkedin.com/company/leagun-technologies", // ✅ add your socials
+                "https://www.linkedin.com/company/leagun-technologies",
+                "https://x.com/leagun_tech?s=11", // Twitter/X
               ],
-              areaServed: [
-                { "@type": "Country", name: "USA" },
-                { "@type": "Country", name: "Canada" },
-                { "@type": "Country", name: "United Kingdom" },
-                { "@type": "Country", name: "Australia" },
-                { "@type": "Country", name: "Germany" },
-                { "@type": "Country", name: "United Arab Emirates" },
-                { "@type": "Country", name: "India" },
-                { "@type": "Country", name: "Pakistan" },
-              ],
+              areaServed: {
+                "@type": "AdministrativeArea",
+                name: "Worldwide",
+              },
             }),
           }}
         />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
       </body>
     </html>
   );

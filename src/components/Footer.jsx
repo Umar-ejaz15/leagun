@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Linkedin, Mail, ArrowUp, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -65,6 +65,15 @@ const Footer = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Linkedin className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                href="https://x.com/leagun_tech?s=11"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2, color: "#9333ea" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <Twitter className="w-5 h-5" />
               </motion.a>
 
               <motion.a
