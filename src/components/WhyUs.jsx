@@ -8,8 +8,6 @@ import {
   UserCheck,
 } from "lucide-react";
 import { Highlighter } from "@/components/magicui/highlighter";
-import TopShape from "@/components/TopShape";
-import BottomShape from "@/components/BottomShape";
 
 const WhyUs = () => {
   const features = [
@@ -46,11 +44,12 @@ const WhyUs = () => {
   ];
 
   return (
-    <section className="relative w-full py-20 px-6 md:px-12 overflow-hidden bg-gradient-to-b from-white to-purple-50">
-   
-
-      {/* Heading */}
-      <div className="max-w-7xl mx-auto text-center mb-16">
+    <section
+      id="why-us"
+      className="relative w-full py-20 px-6 md:px-12 overflow-hidden bg-gradient-to-b from-white to-purple-50"
+    >
+      {/* Section Header */}
+      <header className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-extrabold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-700 to-purple-400 drop-shadow-sm mb-6">
           Why Choose{" "}
           <Highlighter action="underline" color="purple">
@@ -66,20 +65,20 @@ const WhyUs = () => {
           From optimizing your Google Business Profile to building authority with
           backlinks, we help you dominate local search.
         </p>
-      </div>
+      </header>
 
       {/* Features Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {features.map((item, i) => {
           const Icon = item.icon;
           return (
-            <div
+            <article
               key={i}
               className="group bg-white/80 backdrop-blur-md hover:bg-purple-50/90 transition-all duration-300 rounded-xl p-8 border border-purple-100 shadow-sm hover:shadow-xl hover:-translate-y-1"
             >
               <div className="flex items-center mb-5">
                 <div className="p-4 rounded-xl bg-gradient-to-r from-purple-500 to-purple-600 text-white shadow-md group-hover:scale-110 transition-transform">
-                  <Icon className="w-7 h-7" />
+                  <Icon className="w-7 h-7" aria-hidden="true" />
                 </div>
               </div>
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
@@ -88,7 +87,7 @@ const WhyUs = () => {
               <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                 {item.desc}
               </p>
-            </div>
+            </article>
           );
         })}
       </div>

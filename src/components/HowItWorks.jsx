@@ -40,7 +40,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="relative py-20 px-6 md:px-12 bg-gradient-to-r from-purple-600 via-purple-700 to-purple-900 text-white overflow-hidden">
+    <section id="whyus" className="relative py-20 px-6 md:px-12 bg-gradient-to-r from-purple-600 via-purple-700 to-purple-900 text-white overflow-hidden">
       {/* Background Glow */} 
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-purple-400 rounded-full blur-3xl opacity-20" />

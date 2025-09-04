@@ -18,27 +18,16 @@ const Home = () => {
       <Navigation />
       <div className="overflow-hidden ">
         {/* Hero Section */}
-        <div id="home">
-          <Hero />
-        </div>
+        <Hero />
 
         <MarketingGuide />
 
-        <div id="about">
-          <About />
-        </div>
+        <About />
 
+        <CaseStudies />
+        <HowItWorks />
 
-        <div id="casestudies">
-          <CaseStudies />
-        </div>
-        <div id="whyus">
-          <HowItWorks />
-        </div>
-
-        <div id="contact">
-          <Form />
-        </div>
+        <Form />
       </div>
       <Footer />
     </div>

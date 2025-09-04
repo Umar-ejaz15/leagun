@@ -28,7 +28,7 @@ const Form = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-purple-200 via-white md:mt-0 to-purple-200 w-full min-h-screen flex items-center justify-center px-6 sm:px-12 lg:px-32 py-24">
+    <section id="contact" className="relative bg-gradient-to-br from-purple-200 via-white md:mt-0 to-purple-200 w-full min-h-screen flex items-center justify-center px-6 sm:px-12 lg:px-32 py-24">
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* -------- Left Content -------- */}
         <div

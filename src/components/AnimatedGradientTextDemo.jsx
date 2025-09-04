@@ -19,7 +19,7 @@ export function AnimatedGradientTextDemo() {
         }}
       />
       <AnimatedGradientText className="text-sm md:text-lg font-extrabold">
-        <h1>Struggling to increase sales and grow</h1>
+        <h1></h1>
       </AnimatedGradientText>
       <BadgeQuestionMarkIcon
         className="ml-1 size-4 stroke-neutral-500 transition-transform

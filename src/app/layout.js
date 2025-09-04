@@ -14,78 +14,24 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title:
-    "Leagun Technologies | Driving Business Growth with High-Quality Leads & Marketing Automation",
+    "Leagun Technologies | Lead Generation & Sales Growth Agency for USA & Global Markets",
   description:
-    "Leagun Technologies is a trusted lead generation and sales growth agency helping businesses in the USA and Canada scale effectively. We specialize in B2B and B2C lead generation, marketing automation, conversion optimization, and strategic growth solutions that drive high-quality leads, boost revenue, and maximize ROI.",
-
+    "Leagun Technologies helps businesses in USA, Canada, UK, and worldwide scale with high-quality B2B & B2C lead generation, marketing automation, and ROI-driven growth strategies.",
   keywords: [
-    "Leagun",
-    "Leagun Tech",
-    "Leagun Technology",
     "Lead Generation Agency",
     "Sales Growth Agency",
     "B2B Lead Generation",
     "B2C Lead Generation",
-    "Business Growth USA",
-    "Business Growth Canada",
-    "Marketing Technology",
-    "Digital Marketing Solutions",
-    "Conversion Optimization",
     "Marketing Automation",
-    "Revenue Growth Strategies",
-    "High-Quality Leads",
-    "Performance Marketing",
-    "Sales Funnel Optimization",
-    "Growth Hacking",
-    "Lead Nurturing",
+    "Conversion Optimization",
     "Customer Acquisition",
-    "ROI Optimization",
-    "Online Marketing Services",
-    "Lead Generation Services",
-    "Sales Leads Provider",
-    "Top Lead Generation Company",
-    "Sales Acceleration",
-    "Business Expansion Services",
-    "Digital Lead Generation",
-    "Lead Management Solutions",
-    "Targeted Lead Generation",
-    "B2B Sales Leads",
-    "B2C Sales Leads",
-    "Marketing & Sales Growth",
-    "Lead Conversion Strategies",
-    "Client Acquisition Solutions",
-    "Automated Lead Generation",
-    "Marketing Analytics Tools",
-    "Revenue Growth Consulting",
-    "Sales Performance Optimization",
-    "Lead Growth Engine",
-    "Business Development Solutions",
-    "Digital Sales Optimization",
-    "Lead Prospecting Agency",
-    "Qualified Leads Provider",
-    "Sales Pipeline Optimization",
-    "Lead Generation Strategies USA",
-    "Lead Generation Strategies Canada",
-    "Enterprise Lead Generation",
-    "SMB Lead Generation Services",
-    "High-Intent Leads",
-    "Lead Generation Experts",
-    "Growth Marketing Agency",
-    "Sales Funnel Management",
     "ROI-Driven Marketing",
-    "Digital Marketing Growth",
-    "Customer Acquisition Strategies",
-    "Leagun Growth Engine",
-    "Leagun Sales Solutions",
-    "Lead Generation Platform",
-    "Business Lead Accelerator",
-    "Sales & Marketing Consulting",
-    "B2B Marketing Solutions",
-    "B2C Marketing Solutions",
-    "Performance-Driven Lead Gen",
-    "Lead Generation Optimization",
+    "Sales Funnel Optimization",
+    "High-Quality Leads",
+    "Business Growth Services USA",
+    "Digital Marketing Solutions",
+    "Leagun Technologies",
   ],
-
   authors: [{ name: "Leagun" }],
   robots: "index, follow",
   metadataBase: new URL("https://www.leagun.com"),
@@ -96,23 +42,31 @@ export const metadata = {
     title:
       "Leagun Technologies | Driving Business Growth with High-Quality Leads & Marketing Automation",
     description:
-      "Leagun Technologies is a trusted lead generation and sales growth agency helping businesses in the USA and Canada scale effectively. We specialize in B2B and B2C lead generation, marketing automation, conversion optimization, and strategic growth solutions that drive high-quality leads, boost revenue, and maximize ROI.",
+      "Trusted lead generation & sales growth agency serving USA, Canada, UK & global businesses with B2B/B2C lead gen, automation, and growth solutions.",
     url: "https://www.leagun.com/",
     siteName: "Leagun Technologies",
     images: [
       {
-        url: "https://www.leagun.com/logo.jpg",
+        url: "https://www.leagun.com/og-banner.jpg", // ✅ create this banner instead of just logo
         width: 1200,
         height: 630,
-        alt: "Leagun Logo - Lead Generation & Sales Growth Agency",
+        alt: "Leagun Technologies - Lead Generation & Sales Growth Agency",
       },
     ],
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    site: "@leagun", // even if you don’t have, you can leave null or brand it later
+    title: "Leagun Technologies | Lead Generation & Growth Experts",
+    description:
+      "We help businesses worldwide grow with B2B & B2C lead generation, automation, and ROI-driven marketing strategies.",
+    images: ["https://www.leagun.com/og-banner.jpg"],
+  },
   icons: {
-    icon: "/favicon-32x32.png",
-    shortcut: "/favicon.ico",
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
     other: [
       {
@@ -136,20 +90,39 @@ export default function RootLayout({ children }) {
 
         {/* ✅ JSON-LD Organization Schema for Google Rich Results */}
         <Script
-          id="organization-schema"
+          id="local-business-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": "LocalBusiness",
               name: "Leagun Technologies",
               url: "https://www.leagun.com",
               logo: "https://www.leagun.com/logo.jpg",
+              image: "https://www.leagun.com/og-banner.jpg",
               description:
-                "Leagun Technologies is a trusted lead generation and sales growth agency helping businesses in the USA and Canada scale effectively. We specialize in B2B and B2C lead generation, marketing automation, conversion optimization, and strategic growth solutions that drive high-quality leads, boost revenue, and maximize ROI.",
+                "Leagun Technologies is a trusted lead generation and sales growth agency helping businesses in the USA, Canada, and worldwide scale effectively. We specialize in B2B and B2C lead generation, marketing automation, conversion optimization, and growth strategies.",
+              email: "contact@leagun.com",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Remote Office",
+                addressLocality: "Online Business",
+                addressRegion: "Global",
+                postalCode: "00000",
+                addressCountry: "Worldwide",
+              },
               sameAs: [
-                "https://www.facebook.com/leagun",
-                "https://www.linkedin.com/company/leagun-technologies/",
+                "https://www.linkedin.com/company/leagun-technologies", // ✅ add your socials
+              ],
+              areaServed: [
+                { "@type": "Country", name: "USA" },
+                { "@type": "Country", name: "Canada" },
+                { "@type": "Country", name: "United Kingdom" },
+                { "@type": "Country", name: "Australia" },
+                { "@type": "Country", name: "Germany" },
+                { "@type": "Country", name: "United Arab Emirates" },
+                { "@type": "Country", name: "India" },
+                { "@type": "Country", name: "Pakistan" },
               ],
             }),
           }}
