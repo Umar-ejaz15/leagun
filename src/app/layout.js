@@ -94,10 +94,10 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": "Organization",
               name: "Leagun Technologies",
               url: "https://www.leagun.com",
-              logo: "https://www.leagun.com/logo.jpg",
+              logo: "https://www.leagun.com/android-chrome-512x512.png",
               image: "https://www.leagun.com/og-banner.jpg",
               description:
                 "Leagun Technologies is a trusted lead generation and sales growth agency helping businesses in the USA, Canada, and worldwide scale effectively. We specialize in B2B and B2C lead generation, marketing automation, conversion optimization, and growth strategies.",
