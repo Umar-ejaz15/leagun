@@ -15,18 +15,18 @@ const Hero = () => {
 
         {/* Pain Point */}
         <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 tracking-tight">
-          Struggling to increase sales & grow your business?
+      Struggling to increase sales and grow? 
         </h1>
 
         {/* Solution */}
         <h2 className="text-2xl sm:text-2xl md:text-3xl text-gray-900 leading-snug max-w-3xl">
-          We help local businesses in USA & Canada book{" "}
+           We help local businesses book 
           <Highlighter action="underline" color="purple">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
-              40–50 qualified appointments
+           40–50 
             </span>
           </Highlighter>{" "}
-          every month — guaranteed
+           ready-to-go appointments every month, no catch 
         </h2>
 
         {/* Video Section */}

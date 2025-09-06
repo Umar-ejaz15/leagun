@@ -28,13 +28,20 @@ const About = () => {
       {/* Company Info */}
       <div className="max-w-5xl mx-auto px-6 text-center space-y-6 mb-12">
         <p className="text-gray-900 sm:text-lg md:text-xl leading-relaxed">
-          <strong>Leagun Technologies</strong>, formerly Soft Stone Technologies, has been pushing boundaries for 3 years. We’ve tested a lot, failed a lot, and figured out what actually works. That’s how our <strong>Sales Growth Engine</strong> was born — not theory, but real strategies tested in the field.
+          <strong>Leagun Technologies</strong>, formerly Soft Stone
+          Technologies, has been pushing boundaries for 3 years. We’ve tested a
+          lot, failed a lot, and figured out what actually works. That’s how our{" "}
+          <strong>Sales Growth Engine</strong> was Built real strategies, proven
+          in the field, not just theory.
         </p>
         <p className="text-gray-800 sm:text-lg md:text-xl leading-relaxed">
-          Founded by <strong>Zain Noor</strong>, we focus on helping local businesses across the <strong>USA and Canada</strong> grow their sales. From HVAC companies to remodelers, dental clinics, med spas, electricians, and more, we partner with small and mid-sized businesses that want predictable, repeatable revenue.
+          Founded by Zain Noor, our focus is simple: help businesses grow sales
+          with systems that actually deliver.
         </p>
         <p className="text-gray-900 sm:text-lg md:text-xl leading-relaxed">
-          Our mission is simple: to make sure local businesses don’t just <strong>survive</strong>, but <strong>grow</strong>, with systems that deliver visibility, leads, and consistent sales.
+          Our mission is simple: to make sure local businesses don’t just{" "}
+          <strong>survive</strong>, but <strong>grow</strong>, with systems that
+          deliver visibility, leads, and consistent sales.
         </p>
       </div>
 
@@ -51,15 +58,19 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Left: Text */}
           <div className="order-2 lg:order-1 space-y-5">
-            <h3 className="text-2xl md:text-3xl underline font-bold text-gray-900">Zain Noor</h3>
+            <h3 className="text-2xl md:text-3xl underline font-bold text-gray-900">
+              Zain Noor
+            </h3>
             <p className="text-purple-700 font-semibold text-lg md:text-xl">
               Founder, Leagun Technologies | Sales Growth Specialist
             </p>
             <p className="text-gray-700 sm:text-lg md:text-xl">
-              Zain has spent <strong>5+ years</strong> selling in some of the toughest markets — USA, UK, and UAE — working with global companies and leading Mid-Market sales at the multi-billion-dollar <strong>Motive Technologies</strong>.
-            </p>
-            <p className="text-gray-700 sm:text-lg md:text-xl">
-              His edge? Taking messy, underperforming pipelines and turning them into <strong>predictable sales engines</strong>. Not theory, not fluff, just systems proven to win more deals, generate repeatable revenue, and actually <strong>grow businesses</strong>.
+              Zain Noor is a sales professional with 5+ years of experience
+              across the <strong>USA, UK, and UAE.</strong> He has worked with
+              top companies, including leading the Mid-Market segment for the
+              multi-billion-dollar Motive Technologies. Known for knowing sales
+              better than most companies themselves, Zain has built and tested
+              systems that turn struggling pipelines into predictable growth.
             </p>
 
             {/* Contact */}
@@ -81,7 +92,7 @@ const About = () => {
             <img
               src="/pic.jpg"
               alt="Zain Noor, Founder of Leagun Technologies"
-              className="rounded-2xl shadow-xl border-4 border-purple-200 transition-transform hover:scale-105 duration-500"
+              className="rounded-2xl shadow-xl border-4 border-purple-200"
             />
           </figure>
         </div>
@@ -92,7 +103,9 @@ const About = () => {
             Ready to Scale with Us?
           </h2>
           <p className="text-gray-700 sm:text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            Let’s build a predictable system for your sales growth. Book a free consultation with Zain and discover how <strong>Leagun Technologies</strong> can help your business thrive.
+            Let’s build a predictable system for your sales growth. Book a free
+            consultation with Zain and discover how{" "}
+            <strong>Leagun Technologies</strong> can help your business thrive.
           </p>
           <Buttonrgb
             txt="Book My Free Consultation"
