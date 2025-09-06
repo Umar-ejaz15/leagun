@@ -20,7 +20,7 @@ const Hero = () => {
 
         {/* Solution */}
         <h2 className="text-2xl sm:text-2xl md:text-3xl text-gray-900 leading-snug max-w-3xl">
-           We help local businesses book 
+           We help local businesses book { " "}
           <Highlighter action="underline" color="purple">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
            40–50 
