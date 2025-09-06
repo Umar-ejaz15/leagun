@@ -2,6 +2,7 @@ import React from "react";
 import Buttonrgb from "@/components/Buttonrgb";
 import { Highlighter } from "@/components/magicui/highlighter";
 import Script from "next/script";
+import { Rocket } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -12,21 +13,23 @@ const Hero = () => {
     >
       {/* Main Content */}
       <div className="relative z-10 mt-26 flex flex-col items-center text-center max-w-6xl mx-auto space-y-2">
-
         {/* Pain Point */}
         <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 tracking-tight">
-      Struggling to increase sales and grow? 
+          Struggling to increase sales and grow?
         </h1>
 
         {/* Solution */}
         <h2 className="text-2xl sm:text-2xl md:text-3xl text-gray-900 leading-snug max-w-3xl">
-           We help local businesses book { " "}
+          We help local businesses book{" "}
           <Highlighter action="underline" color="purple">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
-           40–50 
+              40–50
             </span>
           </Highlighter>{" "}
-           ready-to-go appointments every month, no catch 
+          appointments every month, no catch{" "}
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
+            <Rocket />
+          </span>
         </h2>
 
         {/* Video Section */}
