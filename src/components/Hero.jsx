@@ -23,7 +23,7 @@ const Hero = () => {
           We help local businesses book{" "}
           <Highlighter action="underline" color="purple">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
-              40–50
+              40–50{" "}
             </span>
           </Highlighter>{" "}
           appointments every month, no catch{" "}
