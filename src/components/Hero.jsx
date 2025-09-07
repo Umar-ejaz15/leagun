@@ -25,7 +25,7 @@ const Hero = () => {
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
               40–50{" "}
             </span>
-          </Highlighter>{" "}
+          </Highlighter>
           appointments every month, no catch{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
             <Rocket />
