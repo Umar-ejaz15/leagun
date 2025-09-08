@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Highlighter } from "@/components/magicui/highlighter";
 import { Download } from "lucide-react";
@@ -32,19 +31,17 @@ const MarketingGuide = () => {
         </p>
 
         {/* CTA Button */}
-        <div
-          className="mt-8"
-        >
+        <div className="mt-8">
           <a
             href="/freeguide.pdf"
             download
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-xl text-lg font-semibold 
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold 
                        bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400 text-white shadow-md 
-                       hover:shadow-xl hover:scale-105 hover:shadow-purple-400/40
+                       hover:shadow-lg  hover:shadow-purple-400/40
                        transition-all duration-300"
           >
-            <Download className="w-5 h-5" />
-            Download PDF Guide
+            <Download className="w-4 h-4" />
+            Download PDF
           </a>
         </div>
       </div>
