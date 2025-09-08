@@ -68,7 +68,7 @@ const Hero = () => {
           description:
             "Leagun helps local businesses in USA & Canada book 40–50 appointments monthly using proven lead generation & sales growth strategies.",
           thumbnailUrl: ["https://www.leagun.com/og-banner.jpg"],
-          uploadDate: "2025-09-01",
+          uploadDate: "2025-09-01T09:00:00+00:00", // ✅ Fixed format
           duration: "PT2M30S",
           contentUrl: "https://www.leagun.com/",
           embedUrl: "https://www.youtube.com/embed/lo8d0Cn8UZ4",
