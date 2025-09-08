@@ -27,9 +27,6 @@ const Hero = () => {
             </span>
           </Highlighter>{" "}
           appointments every month, no catch{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
-            <Rocket />
-          </span>
         </h2>
 
         {/* Video Section */}
