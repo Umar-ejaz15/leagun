@@ -14,7 +14,7 @@ const Hero = () => {
       {/* Main Content */}
       <div className="relative z-10 mt-26 flex flex-col items-center text-center max-w-6xl mx-auto space-y-2">
         {/* Pain Point */}
-        <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 tracking-tight">
+        <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 tracking-tight">
           Struggling to increase sales and grow?
         </h1>
 
@@ -25,7 +25,7 @@ const Hero = () => {
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
               40–50{" "}
             </span>
-          </Highlighter>
+          </Highlighter>{" "}
           appointments every month, no catch{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-600 to-purple-400">
             <Rocket />
