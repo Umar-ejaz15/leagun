@@ -1,96 +1,136 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll";
-import { Linkedin, Mail, ArrowUp, Twitter } from "lucide-react";
-import { motion } from "framer-motion";
 
-const Footer = () => {
-  
-  const sections = ["home", "whyus", "about", "contact"];
+import { useSite } from "./site/SiteProvider";
+
+const LeafLogo = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M12 3v18" />
+    <path d="M8 7l4-4 4 4" />
+    <path d="M6 13c0 3.3 2.7 6 6 6s6-2.7 6-6" />
+  </svg>
+);
+
+export default function Footer() {
+  const { scrollTo, scrollToTop, openModal } = useSite();
+  const year = new Date().getFullYear();
 
   return (
-    <div className="bg-gradient-to-l from-purple-200 via-white to-purple-200 w-full border-t border-purple-100 relative">
-      {/* Gradient Divider */}
-      <div className="w-full h-[2px] bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200" />
-
-      {/* Footer Main */}
-      <footer className="py-10 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Logo & Copy */}
-          <div>
-            <img src="/logo.jpg" alt="Logo" className="h-10 mb-3" />
-            <p className="text-gray-600 text-sm mb-4">
-              Scaling businesses with smart automation and AI-driven solutions.
+    <footer>
+      <div className="wrap">
+        <div className="ft-grid">
+          <div className="ft-brand">
+            <a className="logo" onClick={scrollToTop}>
+              <div className="logo-box">
+                <LeafLogo />
+              </div>
+              <span className="logo-name">Leagun</span>
+            </a>
+            <p>
+              The growth partner built only for tree service, landscaping, and
+              arborist companies across the United States. We aim. We fire. You get
+              the jobs.
             </p>
-            <p className="text-gray-500 text-xs">
-              &copy; {new Date().getFullYear()} Leagun Technologies. All rights
-              reserved.
-            </p>
+            <div className="ft-socials">
+              <a
+                href="https://www.facebook.com/profile.php?id=61580256073424"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path d="M14 9h3V5.5h-2.5c-2 0-3.5 1.5-3.5 3.5v2H8.5V14H11v6h3v-6h2.5L17 11h-3V9.5c0-.3.2-.5.5-.5z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/106195542/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path d="M6.5 8.5h-3V20h3V8.5zM5 4a1.75 1.75 0 100 3.5A1.75 1.75 0 005 4zM20.5 20v-6.4c0-3.2-1.7-4.7-4-4.7-1.8 0-2.6 1-3.1 1.7V8.5h-3V20h3v-6.2c0-.3 0-.6.1-.8.3-.6.8-1.3 1.8-1.3 1.3 0 1.8 1 1.8 2.4V20h3.4z" />
+                </svg>
+              </a>
+              <a
+                href="https://x.com/leagun_tech?s=21"
+                target="_blank"
+                rel="noopener"
+                aria-label="X"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path d="M17.5 3h2.7l-5.9 6.7L21 21h-5.4l-4.3-5.6L6.4 21H3.7l6.3-7.2L3 3h5.5l3.9 5.1L17.5 3zm-1 16.2h1.5L8.1 4.7H6.5l9.9 14.5z" />
+                </svg>
+              </a>
+            </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-gray-900 font-semibold mb-3">Quick Links</h4>
-            <ul className="space-y-2 text-gray-600 text-sm">
-              {sections.map((item, i) => (
-                <li key={i}>
-                  <ScrollLink
-                    to={item}
-                    smooth={true}
-                    duration={500}
-                    offset={-80} // adjust if you have fixed header
-                    className="cursor-pointer hover:text-purple-600 relative inline-block 
-                     after:block after:h-[2px] after:bg-purple-500 
-                     after:w-0 hover:after:w-full after:transition-all 
-                     after:duration-300"
-                  >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                  </ScrollLink>
-                </li>
-              ))}
+          <div className="ft-col">
+            <h4>Company</h4>
+            <ul>
+              <li>
+                <a onClick={() => scrollTo("icp")}>Who We Help</a>
+              </li>
+              <li>
+                <a onClick={() => scrollTo("engine")}>How It Works</a>
+              </li>
+              <li>
+                <a onClick={() => scrollTo("results")}>Results</a>
+              </li>
+              <li>
+                <a onClick={() => scrollTo("about")}>About</a>
+              </li>
             </ul>
           </div>
 
-          {/* Social */}
-          <div>
-            <h4 className="text-gray-900 font-semibold mb-3">
-              Connect with us
-            </h4>
-            <div className="flex gap-4 text-gray-600">
-              <motion.a
-                href="https://www.linkedin.com/company/leagun-technologies/"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, color: "#9333ea" }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Linkedin className="w-5 h-5" />
-              </motion.a>
-              <motion.a
-                href="https://x.com/leagun_tech?s=11"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, color: "#9333ea" }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Twitter className="w-5 h-5" />
-              </motion.a>
+          <div className="ft-col">
+            <h4>Get Started</h4>
+            <ul>
+              <li>
+                <a onClick={() => scrollTo("final")}>I&apos;m Ready To Scale</a>
+              </li>
+              <li>
+                <a onClick={() => scrollTo("calc")}>Revenue Calculator</a>
+              </li>
+              <li>
+                <a onClick={() => openModal("video")}>Watch the Video</a>
+              </li>
+            </ul>
+          </div>
 
-              <motion.a
-                href="mailto:contact@leagun.com"
-                whileHover={{ scale: 1.2, color: "#9333ea" }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Mail className="w-5 h-5" />
-              </motion.a>
-            </div>
+          <div className="ft-col">
+            <h4>Contact</h4>
+            <ul>
+              <li>
+                <a href="tel:+13074301754">(307) 430-1754</a>
+              </li>
+              <li>
+                <a href="mailto:contact@leagun.com">contact@leagun.com</a>
+              </li>
+              <li>
+                <a href="http://leagun.com" target="_blank" rel="noopener">
+                  leagun.com
+                </a>
+              </li>
+              <li>
+                <a>30 N Gould St Ste R</a>
+              </li>
+              <li>
+                <a>Sheridan, WY 82801</a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        
-      </footer>
-    </div>
+        <div className="ft-bot">
+          <div className="ft-copy">
+            © {year} Leagun Technologies LLC. All rights reserved.
+          </div>
+          <div className="ft-links">
+            <a onClick={() => openModal("privacy")}>Privacy Policy</a>
+            <a onClick={() => openModal("terms")}>Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
-};
-
-export default Footer;
+}

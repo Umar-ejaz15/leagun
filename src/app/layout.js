@@ -1,38 +1,43 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Self-hosted (next/font) — no render-blocking external request, no layout shift.
+const inter = Inter({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+});
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-playfair",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const viewport = {
+  themeColor: "#07160d",
+};
 
 // Default metadata (can be overridden per page)
 export const metadata = {
   title:
-    "Leagun Technologies | Lead Generation & Sales Growth Agency for USA & Global Markets",
+    "Leagun Technologies — More Booked Jobs for Tree Service & Landscaping Companies",
   description:
-    "Leagun Technologies helps businesses in USA, Canada, UK, and worldwide scale with high-quality B2B & B2C lead generation, marketing automation, and ROI-driven growth strategies.",
+    "Leagun builds and runs the system that keeps tree service, landscaping, and arborist companies booked — so you stop depending on referrals and word of mouth.",
   keywords: [
-    "Lead Generation Agency",
-    "Sales Growth Agency",
-    "B2B Lead Generation",
-    "B2C Lead Generation",
-    "Marketing Automation",
-    "Conversion Optimization",
-    "Customer Acquisition",
-    "ROI-Driven Marketing",
-    "Sales Funnel Optimization",
-    "High-Quality Leads",
-    "Business Growth Services USA",
-    "Digital Marketing Solutions",
+    "Tree Service Marketing",
+    "Landscaping Lead Generation",
+    "Arborist Marketing",
+    "Lawn Care Leads",
+    "Tree Service Leads",
+    "Landscaping Growth Agency",
+    "Booked Jobs",
+    "Green Industry Marketing",
     "Leagun Technologies",
-    "Leagun ",
+    "Leagun",
     "Leagun Tech",
   ],
   authors: [{ name: "Leagun Technologies" }],
@@ -43,9 +48,9 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "Leagun Technologies | Driving Business Growth with High-Quality Leads & Marketing Automation",
+      "Leagun Technologies — We get tree & landscaping companies more booked jobs",
     description:
-      "Trusted lead generation & sales growth agency serving USA, Canada, UK & global businesses with B2B/B2C lead gen, automation, and growth solutions.",
+      "We aim. We fire. You get the jobs. The growth system built only for tree service, landscaping, and arborist companies.",
     url: "https://www.leagun.com/",
     siteName: "Leagun Technologies",
     images: [
@@ -53,7 +58,7 @@ export const metadata = {
         url: "https://www.leagun.com/og-banner.jpg",
         width: 1200,
         height: 630,
-        alt: "Leagun Technologies - Lead Generation & Sales Growth Agency",
+        alt: "Leagun Technologies — Growth for tree service & landscaping companies",
       },
     ],
     locale: "en_US",
@@ -62,9 +67,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@leagun_tech",
-    title: "Leagun Technologies | Lead Generation & Growth Experts",
+    title: "Leagun Technologies — More booked jobs for tree & landscaping pros",
     description:
-      "We help businesses worldwide grow with B2B & B2C lead generation, automation, and ROI-driven marketing strategies.",
+      "The growth system built only for tree service, landscaping, and arborist companies.",
     images: ["https://www.leagun.com/og-banner.jpg"],
   },
   icons: {
@@ -87,7 +92,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* JSON-LD for LocalBusiness */}
+        {/* JSON-LD for Organization */}
         <Script
           id="local-business-schema"
           type="application/ld+json"
@@ -95,38 +100,36 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Leagun Technologies",
+              name: "Leagun Technologies LLC",
               url: "https://www.leagun.com",
               logo: "https://www.leagun.com/android-chrome-512x512.png",
               image: "https://www.leagun.com/og-banner.jpg",
               description:
-                "Leagun Technologies is a trusted lead generation and sales growth agency helping businesses in the USA, Canada, and worldwide scale effectively. We specialize in B2B and B2C lead generation, marketing automation, conversion optimization, and growth strategies.",
+                "Leagun Technologies is a growth partner built only for tree service, landscaping, and arborist companies across the United States.",
               email: "contact@leagun.com",
+              telephone: "+1-307-430-1754",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Remote Office",
-                addressLocality: "Online Business",
-                addressRegion: "Global",
-                postalCode: "00000",
-                addressCountry: "Worldwide",
+                streetAddress: "30 N Gould St Ste R",
+                addressLocality: "Sheridan",
+                addressRegion: "WY",
+                postalCode: "82801",
+                addressCountry: "US",
               },
               sameAs: [
-                "https://www.linkedin.com/company/leagun-technologies",
-                "https://x.com/leagun_tech?s=11", // Twitter/X
+                "https://www.facebook.com/profile.php?id=61580256073424",
+                "https://www.linkedin.com/company/106195542/",
+                "https://x.com/leagun_tech?s=21",
               ],
               areaServed: {
-                "@type": "AdministrativeArea",
-                name: "Worldwide",
+                "@type": "Country",
+                name: "United States",
               },
             }),
           }}
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${inter.variable} ${playfair.variable}`}>{children}</body>
     </html>
   );
 }
