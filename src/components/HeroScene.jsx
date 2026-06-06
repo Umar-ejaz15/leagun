@@ -271,16 +271,13 @@ function CameraRig({ reduce }) {
   return null;
 }
 
-function Scene({ small }) {
+function Scene({ compact }) {
+  // Tablet + mobile (compact): a single hero tree centered in frame.
+  // Desktop: the full receding grove.
   const trees = useMemo(
     () =>
-      small
-        ? [
-            [-1.2, 2, 1.25, 0],
-            [3.2, -2, 1.0, 2],
-            [-4, -4, 0.85, 3],
-            [5, -6, 0.7, 1],
-          ]
+      compact
+        ? [[0, 1.5, 1.6, 0]]
         : [
             [-1.4, 2.5, 1.45, 0],
             [3.6, 0, 1.1, 2],
@@ -290,7 +287,7 @@ function Scene({ small }) {
             [9, -9, 0.7, 2],
             [0, -11, 0.65, 0],
           ],
-    [small]
+    [compact]
   );
 
   return (
@@ -302,10 +299,10 @@ function Scene({ small }) {
 
       <Ground />
       {trees.map((t, i) => (
-        <Tree key={i} x={t[0]} z={t[1]} scale={t[2]} tone={t[3]} small={small} />
+        <Tree key={i} x={t[0]} z={t[1]} scale={t[2]} tone={t[3]} small={compact} />
       ))}
-      <Grass small={small} />
-      <Leaves small={small} />
+      <Grass small={compact} />
+      <Leaves small={compact} />
     </>
   );
 }
@@ -314,7 +311,8 @@ export default function HeroScene() {
   const reduce =
     typeof window !== "undefined" &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const small = typeof window !== "undefined" && window.innerWidth < 760;
+  // Tablet + mobile (< 1000px) → lighter single-tree scene.
+  const compact = typeof window !== "undefined" && window.innerWidth < 1000;
 
   const wrapRef = useRef(null);
   const [inView, setInView] = useState(true);
@@ -347,7 +345,7 @@ export default function HeroScene() {
         }}
         style={{ width: "100%", height: "100%", display: "block" }}
       >
-        <Scene small={small} />
+        <Scene compact={compact} />
         <CameraRig reduce={reduce} />
       </Canvas>
     </div>
